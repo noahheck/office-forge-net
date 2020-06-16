@@ -1,1 +1,80 @@
-//
+/**
+ * sass/app.scss
+ */
+
+$theme-colors: (
+    /*"primary": #0074d9,
+    "danger": #ff4136*/
+);
+
+
+$of-dark: #2e3339;
+$of-dark-lighter: lighten($of-dark, 5);
+$of-blue: #3490dc;
+
+$light-gray: #e3e3e3;
+$dark-gray: #686d63;
+
+@import "bootstrap";
+
+
+body {
+    min-height: 100vh;
+}
+
+
+.navbar {
+
+    background-color: $white;
+
+    img {
+        max-height: 35px;
+    }
+
+    .navbar-nav {
+
+        .active {
+            border-bottom: 2px solid $of-blue;
+        }
+    }
+}
+
+
+.main-content {
+    padding-top: 60px;
+}
+
+
+
+.footer {
+
+    color: $light-gray;
+    background-color: $of-dark-lighter;
+    font-size: .9rem;
+    padding-top: 20px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .os-gutter {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+}
+
+
+.index {
+
+    .jumbotron {
+        background-color: $of-dark-lighter;
+        color: $white;
+    }
+
+}
