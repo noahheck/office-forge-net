@@ -12,12 +12,15 @@ index
 
             <div class="row">
 
-                <div class="col-12 col-md-6 order-md-2">
+                <div class="col-12 col-md-6 order-md-2 operations-image-container">
+
+                    <img alt="Office Forge helps with all of your business's operational concerns" src="{{ asset("images/operations_dots.png") }}">
 
                 </div>
 
-                <div class="col-12 col-md-6 order-md-1">
-                    <p>At Office Forge, we believe nobody knows <em>your</em> business as well as you do. Our goal is to give you software that works the way you work.</p>
+                <div class="col-12 col-md-6 order-md-1 headings-container">
+                    <h3>At Office Forge, we believe nobody knows <em>your</em> business as well as you do.</h3>
+                    <h4>Our goal is to give you software that works the way you work.</h4>
                 </div>
 
             </div>
@@ -73,34 +76,54 @@ index
 
             </div>
 
+        </div>
+
+    </div>
+
+    <div class="of-bg-dark mb-5">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-12 col-md-10">
+
+                    <h2>Your Tools, Your Way</h2>
+
+                    <p>We want to give you the tools you need to do the very best work you can do. You'll be empowered to deliver the best products, service, and support possible to your customers. You'll be able to leverage Office Forge to implement the perfect solution to all of your operational concerns, including:</p>
+
+                    <ul>
+                        <li>
+                            Human Resources
+                            <ul>
+                                <li>Hiring</li>
+                                <li>Training</li>
+                                <li>Development</li>
+                            </ul>
+                        </li>
+                        <li>CRM</li>
+                        <li>Project Management</li>
+                        <li>Compliance</li>
+                    </ul>
+
+                    <h3>And so much more!</h3>
+
+
+                    <p>We're still polishing our software for our initial production release, but if you're interested in what we have to offer and want to learn more, feel free to reach out to us anytime and we'll be happy to connect with you! Drop us an email and we'll get right back to you: <a href="mailto:{{ config('site.supportEmail') }}">{{ config('site.supportEmail') }}</a></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
             <div class="col-12 col-md-10">
-
-                <hr>
-
-                <h2>Your Tools, Your Way</h2>
-
-                <p>We want to give you the tools you need to do the very best work you can do. You'll be empowered to deliver the best products, service, and support possible to your customers. You'll be able to leverage Office Forge to implement the perfect solution to all of your operational concerns, including:</p>
-
-                <ul>
-                    <li>
-                        Human Resources
-                        <ul>
-                            <li>Hiring</li>
-                            <li>Training</li>
-                            <li>Development</li>
-                        </ul>
-                    </li>
-                    <li>CRM</li>
-                    <li>Project Management</li>
-                    <li>Compliance</li>
-                </ul>
-
-                <h3>And so much more!</h3>
-
-
-                <p>We're still polishing our software for our initial production release, but if you're interested in what we have to offer and want to learn more, feel free to reach out to us anytime and we'll be happy to connect with you! Drop us an email and we'll get right back to you: <a href="mailto:{{ config('site.supportEmail') }}">{{ config('site.supportEmail') }}</a></p>
-
-                <hr>
 
                 <h3>When you adopt Office Forge, you get the best of everything!</h3>
 
@@ -124,7 +147,7 @@ index
 
                 </div>
 
-                <div class="row feature-tab border-0">
+                <div class="row feature-tab bg-dark">
 
                     <div class="col-12 col-md-8">
 
@@ -165,7 +188,7 @@ index
 
                 <hr>
 
-                <div class="row feature-tab border-0">
+                <div class="row feature-tab bg-dark">
 
                     <div class="col-12 col-md-4 icon-container">
 

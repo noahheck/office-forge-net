@@ -11000,6 +11000,7 @@ a.text-dark:focus {
 
 body {
   min-height: 100vh;
+  background-color: #fcfcfc;
 }
 
 .navbar {
@@ -11040,16 +11041,49 @@ body {
   font-size: .8rem;
 }
 
+.index .of-bg-dark {
+  background-color: #2e3339;
+  color: #fff;
+}
+
 .index .jumbotron {
   background-color: #394047;
   color: #fff;
+  background-image: radial-gradient(ellipse at center, #394047 0%, #000 100%);
+}
+
+@media (max-width: 767.98px) {
+  .index .jumbotron {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .index .jumbotron .headings-container {
+    padding-top: 100px;
+  }
+}
+
+.index .jumbotron .operations-image-container {
+  text-align: center;
+}
+
+.index .jumbotron .operations-image-container img {
+  max-width: 100%;
+  width: 400px;
+}
+
+.index h2 {
+  margin-top: 30px;
 }
 
 .index .feature-card {
   text-align: center;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid #3490dc;
+  background-color: #fff;
+  box-shadow: 2px 4px 12px 1px #d9d9d9;
 }
 
 .index .feature-card .fas {
@@ -11062,9 +11096,15 @@ body {
 }
 
 .index .feature-tab {
-  border: 1px solid #e3e3e3;
   padding: 15px;
   margin: 15px;
+  background-color: #fff;
+  box-shadow: 2px 4px 12px 1px #d9d9d9;
+}
+
+.index .feature-tab.bg-dark {
+  background-color: #2e3339;
+  color: #fff;
 }
 
 .index .feature-tab .icon-container {

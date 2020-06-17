@@ -2,7 +2,7 @@
  * sass/app.scss
  */
 
-@mixin shadow($offsetX: 2px, $offsetY: 4px, $blurRadius: 5px, $spreadRadius: 0, $color: rgba(0,0,0,0.5)) {
+@mixin shadow($offsetX: 2px, $offsetY: 4px, $blurRadius: 12px, $spreadRadius: 1px, $color: #d9d9d9) {
     -webkit-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
     -moz-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
     box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
@@ -18,7 +18,12 @@ $of-dark: #2e3339;
 $of-dark-lighter: lighten($of-dark, 5);
 $of-blue: #3490dc;
 
+
+$dark-white: #fcfcfc;
+
 $light-gray: #e3e3e3;
+$medium-gray: #c9c9c9;
+$medium-dark-gray: #999;
 $dark-gray: #686d63;
 
 $enable-responsive-font-sizes: true;
@@ -31,6 +36,8 @@ $enable-responsive-font-sizes: true;
 
 body {
     min-height: 100vh;
+
+    background-color: $dark-white;
 }
 
 
@@ -84,9 +91,51 @@ body {
 
 .index {
 
+    .of-bg-dark {
+        background-color: $of-dark;
+        color: $white;
+    }
+
     .jumbotron {
         background-color: $of-dark-lighter;
         color: $white;
+
+        // https://codepen.io/joshuar/pen/qNBYLK
+        background-image: radial-gradient(
+                ellipse at center,
+                //rgba(0,50,50,1) 0%,
+            $of-dark-lighter 0%,
+                //rgba(0,0,0,1) 100%
+            $black 100%
+        );
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+
+        }
+
+        @include media-breakpoint-up(md) {
+
+            .headings-container {
+                padding-top: 100px;
+            }
+
+        }
+
+        .operations-image-container {
+
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                width: 400px;
+            }
+
+        }
+    }
+
+    h2 {
+        margin-top: 30px;
     }
 
     .feature-card {
@@ -94,8 +143,13 @@ body {
         text-align: center;
         padding: 30px;
         margin-bottom: 30px;
+        border: 1px solid $of-blue;
+        background-color: $white;
 
-        @include shadow();
+        //background-color: $of-dark;
+        //color: $white;
+
+        @include shadow($blurRadius: 12px, $spreadRadius: 1px, $color: #d9d9d9);
 
         .fas {
             font-size: 96px;
@@ -110,9 +164,17 @@ body {
 
     .feature-tab {
 
-        border: 1px solid $light-gray;
         padding: 15px;
         margin: 15px;
+        //border: 1px solid $of-blue;
+        background-color: $white;
+
+        &.bg-dark {
+            background-color: $of-dark;
+            color: $white;
+        }
+
+        @include shadow();
 
         .icon-container {
             text-align: center;
@@ -129,7 +191,6 @@ body {
         }
 
         h4 {
-            //border-bottom: 1px solid $light-gray;
             font-weight: bold;
         }
     }
