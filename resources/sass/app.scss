@@ -2,6 +2,12 @@
  * sass/app.scss
  */
 
+@mixin shadow($offsetX: 2px, $offsetY: 4px, $blurRadius: 5px, $spreadRadius: 0, $color: rgba(0,0,0,0.5)) {
+    -webkit-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+    -moz-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+    box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+}
+
 $theme-colors: (
     /*"primary": #0074d9,
     "danger": #ff4136*/
@@ -15,7 +21,12 @@ $of-blue: #3490dc;
 $light-gray: #e3e3e3;
 $dark-gray: #686d63;
 
+$enable-responsive-font-sizes: true;
+
 @import "bootstrap";
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 
 body {
@@ -65,6 +76,7 @@ body {
     .os-gutter {
         padding-top: 20px;
         text-align: center;
+        font-size: .8rem;
     }
 
 }
@@ -75,6 +87,51 @@ body {
     .jumbotron {
         background-color: $of-dark-lighter;
         color: $white;
+    }
+
+    .feature-card {
+
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 30px;
+
+        @include shadow();
+
+        .fas {
+            font-size: 96px;
+            display: block;
+            color: $of-blue;
+            border-bottom: 1px solid $light-gray;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+    }
+
+    .feature-tab {
+
+        border: 1px solid $light-gray;
+        padding: 15px;
+        margin: 15px;
+
+        .icon-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .fas {
+            font-size: 96px;
+            display: block;
+            color: $of-blue;
+            padding: 25px 0;
+        }
+
+        h4 {
+            //border-bottom: 1px solid $light-gray;
+            font-weight: bold;
+        }
     }
 
 }

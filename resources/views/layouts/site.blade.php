@@ -52,8 +52,8 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link {{ $homeRouteActive }}" href="{{ route('home') }}">Home</a>
-                <a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
-                <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
+                {{--<a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
+                <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>--}}
             </div>
         </div>
     </div>
@@ -75,12 +75,12 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
                     <li>
                         <a href="{{ route('home') }}">Home</a>
                     </li>
-                    <li>
+                    {{--<li>
                         <a href={{ route('features') }}>Features</a>
                     </li>
                     <li>
                         <a href={{ route('pricing') }}>Pricing</a>
-                    </li>
+                    </li>--}}
                 </ul>
             </div>
 
