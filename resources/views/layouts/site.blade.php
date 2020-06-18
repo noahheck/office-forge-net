@@ -10,6 +10,11 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Office Forge">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://officeforge.net/images/of_logo_500.png">
+
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
 
     <title>{{ config('app.name') }}</title>
