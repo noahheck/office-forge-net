@@ -88,13 +88,13 @@ body {
 
 }
 
+.of-bg-dark {
+    background-color: $of-dark;
+    color: $white;
+}
 
 .index {
 
-    .of-bg-dark {
-        background-color: $of-dark;
-        color: $white;
-    }
 
     .jumbotron {
         background-color: $of-dark-lighter;
@@ -195,4 +195,59 @@ body {
         }
     }
 
+}
+
+
+
+
+.features {
+
+    img {
+        max-width: 100%;
+    }
+
+    .of-bg-dark {
+        background-color: $of-dark;
+        color: $white;
+    }
+
+    .jumbotron {
+        background-color: $of-dark-lighter;
+        color: $white;
+
+        // https://codepen.io/joshuar/pen/qNBYLK
+        background-image: radial-gradient(
+                ellipse at center,
+                //rgba(0,50,50,1) 0%,
+                $of-dark-lighter 0%,
+                //rgba(0,0,0,1) 100%
+                $black 100%
+        );
+
+
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+
+        }
+
+        @include media-breakpoint-up(md) {
+
+            .headings-container {
+                padding-top: 100px;
+            }
+
+        }
+
+        .operations-image-container {
+
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                width: 400px;
+            }
+
+        }
+    }
 }

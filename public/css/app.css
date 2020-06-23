@@ -11041,7 +11041,7 @@ body {
   font-size: .8rem;
 }
 
-.index .of-bg-dark {
+.of-bg-dark {
   background-color: #2e3339;
   color: #fff;
 }
@@ -11123,5 +11123,41 @@ body {
 
 .index .feature-tab h4 {
   font-weight: bold;
+}
+
+.features img {
+  max-width: 100%;
+}
+
+.features .of-bg-dark {
+  background-color: #2e3339;
+  color: #fff;
+}
+
+.features .jumbotron {
+  background-color: #394047;
+  color: #fff;
+  background-image: radial-gradient(ellipse at center, #394047 0%, #000 100%);
+}
+
+@media (max-width: 767.98px) {
+  .features .jumbotron {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .features .jumbotron .headings-container {
+    padding-top: 100px;
+  }
+}
+
+.features .jumbotron .operations-image-container {
+  text-align: center;
+}
+
+.features .jumbotron .operations-image-container img {
+  max-width: 100%;
+  width: 400px;
 }
 
