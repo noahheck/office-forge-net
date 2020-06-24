@@ -14,8 +14,9 @@ $theme-colors: (
 );
 
 
-$of-dark: #2e3339;
-$of-dark-lighter: lighten($of-dark, 5);
+$of-dark-base: #2e3339;
+$of-dark: darken($of-dark-base, 5);
+$of-dark-lighter: lighten($of-dark-base, 5);
 $of-blue: #3490dc;
 
 
@@ -67,7 +68,7 @@ body {
 .footer {
 
     color: $light-gray;
-    background-color: $of-dark-lighter;
+    background-color: $of-dark;
     font-size: .9rem;
     padding-top: 20px;
 
@@ -93,46 +94,52 @@ body {
     color: $white;
 }
 
-.index {
 
 
-    .jumbotron {
-        background-color: $of-dark-lighter;
-        color: $white;
 
-        // https://codepen.io/joshuar/pen/qNBYLK
-        background-image: radial-gradient(
-                ellipse at center,
-                //rgba(0,50,50,1) 0%,
+
+.jumbotron {
+    background-color: $of-dark-lighter;
+    color: $white;
+
+    // https://codepen.io/joshuar/pen/qNBYLK
+    background-image: radial-gradient(
+            ellipse at center,
+            //rgba(0,50,50,1) 0%,
             $of-dark-lighter 0%,
-                //rgba(0,0,0,1) 100%
+            //rgba(0,0,0,1) 100%
             $black 100%
-        );
+    );
 
-        @include media-breakpoint-down(sm) {
-            text-align: center;
+    @include media-breakpoint-down(sm) {
+        text-align: center;
 
-        }
-
-        @include media-breakpoint-up(md) {
-
-            .headings-container {
-                padding-top: 100px;
-            }
-
-        }
-
-        .operations-image-container {
-
-            text-align: center;
-
-            img {
-                max-width: 100%;
-                width: 400px;
-            }
-
-        }
     }
+
+    @include media-breakpoint-up(md) {
+
+        .headings-container {
+            padding-top: 100px;
+        }
+
+    }
+
+    .operations-image-container {
+
+        text-align: center;
+
+        img {
+            max-width: 100%;
+            width: 400px;
+        }
+
+    }
+}
+
+
+
+
+.index {
 
     h2 {
         margin-top: 30px;
@@ -143,11 +150,7 @@ body {
         text-align: center;
         padding: 30px;
         margin-bottom: 30px;
-        border: 1px solid $of-blue;
         background-color: $white;
-
-        //background-color: $of-dark;
-        //color: $white;
 
         @include shadow($blurRadius: 12px, $spreadRadius: 1px, $color: #d9d9d9);
 
@@ -166,7 +169,6 @@ body {
 
         padding: 15px;
         margin: 15px;
-        //border: 1px solid $of-blue;
         background-color: $white;
 
         &.bg-dark {
@@ -199,55 +201,62 @@ body {
 
 
 
-
 .features {
 
     img {
         max-width: 100%;
     }
 
-    .of-bg-dark {
-        background-color: $of-dark;
-        color: $white;
-    }
-
-    .jumbotron {
-        background-color: $of-dark-lighter;
-        color: $white;
-
-        // https://codepen.io/joshuar/pen/qNBYLK
-        background-image: radial-gradient(
-                ellipse at center,
-                //rgba(0,50,50,1) 0%,
-                $of-dark-lighter 0%,
-                //rgba(0,0,0,1) 100%
-                $black 100%
-        );
+}
 
 
 
-        @include media-breakpoint-down(sm) {
-            text-align: center;
+.pricing {
 
-        }
+    .pricing-icon-container {
+        text-align: center;
+        color: $of-blue;
+        font-size: 96px;
 
         @include media-breakpoint-up(md) {
+            font-size: 144px;
+        }
+    }
 
-            .headings-container {
-                padding-top: 100px;
-            }
+    .hosting-feature {
 
+        .card {
+            @include shadow();
         }
 
-        .operations-image-container {
+        text-align: center;
+        margin-bottom: 15px;
 
-            text-align: center;
+        @include make-col-ready();
 
-            img {
-                max-width: 100%;
-                width: 400px;
-            }
+        @include make-col(10);
 
+        @include media-breakpoint-up(sm) {
+            @include make-col(6);
         }
+        @include media-breakpoint-up(md) {
+            @include make-col(4);
+        }
+
+        .check-icon {
+            font-size: 32px;
+            color: $of-blue;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .list-group {
+    }
+    .list-group-item {
+        border-color: $dark-gray;
+        background-color: $of-dark;
     }
 }

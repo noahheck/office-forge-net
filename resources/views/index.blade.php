@@ -155,6 +155,8 @@ index
 
                         <p>We want you to take advantage of all the work we put in to Office Forge, so we won't charge you more for using more features or for adding more users to <em>your</em> system.</p>
 
+                        <p>See more information on our <a href="{{ route('pricing') }}">pricing page</a>.</p>
+
                     </div>
 
                     <div class="col-12 col-md-4 icon-container">
@@ -177,7 +179,7 @@ index
 
                         <h4>Privacy. Guaranteed.</h4>
 
-                        <p>We do all of our work in the open. You can see all the changes we're making, bugs we're fixing, and features we're adding, and you don't have to wonder what we're doing with your data.</p>
+                        <p>We do all of our work in the open. You can see all the changes we're making, bugs we're fixing, and features we're adding! Also, you don't have to wonder what we're doing with <em>your</em> data.</p>
 
                     </div>
 
