@@ -49,7 +49,7 @@ features
 
                 <p class="mt-5">Using plain language, craft your information forms, use our drag-and-drop simplicity to organize them, and get access to powerful reporting features!</p>
 
-                <p>In addition, because we use utilize comfortable, familiar form systems, your staff already know how to use them.</p>
+                <p>In addition, because we use comfortable, familiar form systems, your staff already know how to use them.</p>
 
             </div>
 
