@@ -111,7 +111,7 @@ pricing
                         <div class="card h-100">
                             <div class="card-body">
                                 <span class="check-icon fas fa-check-circle"></span>
-                                <h3>20 GB storage</h3>
+                                <h3>20 GB Storage</h3>
                                 <p>Plenty of space to keep your business moving strong</p>
                             </div>
                         </div>

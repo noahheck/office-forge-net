@@ -47,7 +47,7 @@ features
 
                 <h4>Office Forge's innovative data collection system helps you collect the information that's important for your business!</h4>
 
-                <p class="mt-5">Using plain language, craft your information forms, use our drag-and-drop simplicity to organize them, and get access to phenomenal reporting facilities!</p>
+                <p class="mt-5">Using plain language, craft your information forms, use our drag-and-drop simplicity to organize them, and get access to powerful reporting features!</p>
 
                 <p>In addition, because we use utilize comfortable, familiar form systems, your staff already know how to use them.</p>
 
