@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'MainController@index')->name('home');
 Route::get('/features', 'MainController@features')->name('features');
 Route::get('/pricing', 'MainController@pricing')->name('pricing');
+
+Route::post('/subscribe-to-updates', 'SubscriberController@subscribe')
+    ->name('subscribe')
+    ->middleware(ProtectAgainstSpam::class);
+
+Route::get('/subscribed', 'SubscriberController@subscribed')->name('subscribed');

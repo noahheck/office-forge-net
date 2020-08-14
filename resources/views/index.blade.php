@@ -30,6 +30,64 @@ index
 
     <div class="container">
 
+        <div class="row justify-content-center mb-5">
+
+            <div class="col-12 col-md-10">
+
+                <div class="card shadow">
+
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-12 col-md-8">
+
+                                <h3>Subscribe to updates!</h3>
+
+                                <p>Sign up to receive updates on Office Forge news and development!</p>
+
+                                <p>Don't worry, we won't send too often (usually 1-2 times per month at most, plus potential security updates), and we won't share your email with anyone.</p>
+
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <form action="{{ route('subscribe') }}" method="POST">
+                                    @csrf
+
+                                    @honeypot
+
+                                    <div class="form-group">
+                                        <label for="subscriber_email">Email Address</label>
+                                        <input type="email" class="form-control" id="subscriber_email" name="subscriber_email" value="{{ old('subscriber_email') }}" placeholder="Your Email Address" required>
+                                    </div>
+                                    @error('subscriber_email')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="confirm_subscription" name="confirm_subscription" value="1" required>
+                                        <label class="form-check-label text-muted" for="confirm_subscription"><small>Yes, please subscribe me to Office Forge updates</small></label>
+                                    </div>
+
+                                    @error('confirm_subscription')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+
+                                    <button type="submit" class="btn btn-primary">Subscribe</button>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="row justify-content-center">
 
             <div class="col-12 col-md-10">
