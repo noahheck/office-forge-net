@@ -24,7 +24,10 @@ Route::post('/subscribe-to-updates', 'SubscriberController@subscribe')
 
 Route::get('/subscribed', 'SubscriberController@subscribed')->name('subscribed');
 
-Auth::routes(['register' => false]);
+Route::middleware(ProtectAgainstSpam::class)->group(function() {
+    Auth::routes(['register' => false]);
+});
+
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::middleware(['auth'])->group(function() {

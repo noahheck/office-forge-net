@@ -11,7 +11,7 @@ $__subscriberRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.sub
 
 @section('content')
 
-    <div class="container mt-5 admin-container">
+    <div class="container mt-5 mb-5 admin-container">
 
         <div class="row">
 
