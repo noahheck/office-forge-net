@@ -1,0 +1,29 @@
+/**
+ * sass/admin.scss
+ */
+
+.admin-container .admin-nav-menu {
+  border-radius: 0;
+}
+
+.admin-container .admin-nav-menu .list-group-item.active {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-left: 3px solid #3490dc;
+  padding-left: 18px;
+  color: #495057;
+}
+
+.admin-container .admin-overview-card .card-header h4 {
+  margin-bottom: 0;
+}
+
+.admin-container .admin-overview-card .card-body {
+  text-align: center;
+}
+
+.admin-container .admin-overview-card .card-body .icon {
+  font-size: 96px;
+  color: #3490dc;
+}
+

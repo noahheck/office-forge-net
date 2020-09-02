@@ -2,6 +2,7 @@
 $homeRouteActive = Route::is('home') ? 'active' : '';
 $featuresRouteActive = Route::is('features') ? 'active' : '';
 $pricingRouteActive = Route::is('pricing') ? 'active' : '';
+$adminRouteActive = Route::is('admin') ? 'active' : '';
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,8 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
     <meta property="og:description" content="At Office Forge, we believe nobody knows your business as well as you do. Our goal is to give you software that works the way you work.">
 
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
+
+    @stack('styles')
 
     <title>{{ config('app.name') }}</title>
 
@@ -56,11 +59,16 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+            <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link {{ $homeRouteActive }}" href="{{ route('home') }}">Home</a>
                 <a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
                 <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
             </div>
+            @auth
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link {{ $adminRouteActive }}" href="{{ route('admin') }}">Admin</a>
+                </div>
+            @endauth
         </div>
     </div>
 </nav>
@@ -106,5 +114,6 @@ $pricingRouteActive = Route::is('pricing') ? 'active' : '';
 </div>
 
 <script src="{{ mix('/js/app.js') }}"></script>
+@stack('scripts')
 </body>
 </html>

@@ -11,17 +11,17 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+mix
+    // .version()
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css/app.css')
+    .sass('resources/sass/admin.scss', 'public/css/admin.css')
+
 ;
 
 /*mix.extract([
     'jquery'
 ]);*/
 
-
-if (mix.inProduction()) {
-    mix.version();
-}
 
 mix.disableNotifications();

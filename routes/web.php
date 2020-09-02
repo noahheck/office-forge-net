@@ -23,3 +23,17 @@ Route::post('/subscribe-to-updates', 'SubscriberController@subscribe')
     ->middleware(ProtectAgainstSpam::class);
 
 Route::get('/subscribed', 'SubscriberController@subscribed')->name('subscribed');
+
+Auth::routes(['register' => false]);
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::middleware(['auth'])->group(function() {
+
+    Route::get('/admin', 'AdminController@index')->name('admin');
+
+    Route::namespace('Admin')->name('admin.')->group(function() {
+
+        Route::resource('/subscribers', 'SubscriberController');
+    });
+
+});
