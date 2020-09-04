@@ -3,6 +3,11 @@
  */
 
 @import "variables";
+@import "trix";
+
+label {
+    font-weight: bold;
+}
 
 .admin-container {
 

@@ -9,6 +9,10 @@ $__subscriberRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.sub
     <link rel="stylesheet" type="text/css" href="{{ mix('css/admin.css') }}">
 @endpush
 
+@push('scripts')
+    <script type="text/javascript" src="{{ mix('js/admin.js') }}"></script>
+@endpush
+
 @section('content')
 
     <div class="container mt-5 mb-5 admin-container">

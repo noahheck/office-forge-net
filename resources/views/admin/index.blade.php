@@ -21,4 +21,18 @@ index
 
     </div>
 
+
+    @textEditorField([
+        'name' => 'test',
+        'id' => 'test',
+        'label' => 'Article Content',
+        'required' => false,
+        'value' => '',
+        'placeholder' => 'Begin writing your masterpiece...',
+        'description' => 'Make sure to be informative and helpful...',
+        'toolbar' => 'full',
+        'resourceType' => 'Thing',
+        'resourceId' => 1,
+    ])
+
 @endsection
