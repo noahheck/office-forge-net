@@ -34,9 +34,11 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/admin', 'AdminController@index')->name('admin');
 
-    Route::namespace('Admin')->name('admin.')->group(function() {
+    Route::namespace('Admin')->name('admin.')->prefix('admin/')->group(function() {
 
         Route::resource('/subscribers', 'SubscriberController');
+
+        Route::resource('/articles', 'ArticleController');
     });
 
 });

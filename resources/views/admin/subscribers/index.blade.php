@@ -9,7 +9,7 @@ index
     <div class="row">
 
         <div class="col-12">
-            <div class="card shadow-sm admin-overview-card">
+            <div class="card shadow-sm ">
                 <div class="card-header">
                     <h4>Subscribers ({{ $subscribers->count() }})</h4>
                 </div>
@@ -18,7 +18,7 @@ index
                         <thead class="thead-dark">
                             <tr>
                                 <th>Email</th>
-                                <th>Action</th>
+                                <th style="width: 125px;">Action</th>
                             </tr>
                         </thead>
                         <tbody>

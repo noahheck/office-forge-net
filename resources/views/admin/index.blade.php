@@ -19,10 +19,21 @@ index
             </div>
         </div>
 
+        <div class="col-12 col-md-6">
+            <div class="card shadow-sm admin-overview-card">
+                <div class="card-header">
+                    <h4>Articles ({{ $articleCount }})</h4>
+                </div>
+                <a class="card-body" href="{{ route('admin.articles.index') }}">
+                    <span class="fas fa-file-alt icon"></span>
+                </a>
+            </div>
+        </div>
+
     </div>
 
 
-    @textEditorField([
+    {{--@textEditorField([
         'name' => 'test',
         'id' => 'test',
         'label' => 'Article Content',
@@ -33,6 +44,6 @@ index
         'toolbar' => 'full',
         'resourceType' => 'Thing',
         'resourceId' => 1,
-    ])
+    ])--}}
 
 @endsection
