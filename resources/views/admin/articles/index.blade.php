@@ -33,7 +33,7 @@ index
                         <tbody>
                             @foreach ($articles as $article)
                                 <tr>
-                                    <td>{{ $article->date }}</td>
+                                    <td>{{ \App\format_date($article->date) }}</td>
                                     <td class="text-center">
                                         @if ($article->published)
                                             <span class="far fa-check-square"></span>

@@ -4,6 +4,14 @@ namespace App;
 
 use Illuminate\Support\Str;
 
+function format_date($date) {
+    if (!$date) {
+        return '';
+    }
+
+    return $date->format('m/d/Y');
+}
+
 function temp_id() {
     return Str::uuid();
 }

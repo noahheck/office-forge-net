@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Article;
 use App\Jobs\Article\Create;
+use App\Jobs\Article\Update;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\Admin\Articles\Store as StoreRequest;
+use App\Http\Requests\Admin\Articles\Update as UpdateRequest;
 
 class ArticleController extends Controller
 {
@@ -66,7 +68,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('admin.articles.show', compact('article'));
     }
 
     /**
@@ -77,7 +79,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -87,9 +89,20 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(UpdateRequest $request, Article $article)
     {
-        //
+        $this->dispatchNow($articleUpdated = new Update(
+            $article,
+            $request->title,
+            $request->subtitle,
+            $request->slug,
+            $request->date,
+            $request->published,
+            $request->summary,
+            $request->content
+        ));
+
+        return redirect()->route('admin.articles.index');
     }
 
     /**
