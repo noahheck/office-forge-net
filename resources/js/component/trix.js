@@ -2,32 +2,12 @@
  * js/component/trix.js
  */
 
-// let $ = require('jquery');
-//
-// let trix = require('./../../../node_modules/trix/dist/trix.js');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let $    = require('jquery');
 let trix = require('./../../../node_modules/trix/dist/trix.js');
 
 let ajax = require('Services/ajax');
 // let notify = require('Services/notify');
-
-console.log(trix);
 
 // Make top-level heading an h2 element
 trix.config.blockAttributes.heading1.tagName = 'h2';
@@ -66,7 +46,8 @@ addEventListener("trix-file-accept", function(event) {
 
     if (!isImage) {
         event.preventDefault();
-        notify.error("Sorry, this editor can't accept that file");
+        // notify.error("Sorry, this editor can't accept that file");
+        alert("Sorry, this editor can't accept that file");
 
         return false;
     }
@@ -76,7 +57,8 @@ addEventListener("trix-file-accept", function(event) {
 
     if (!acceptsImages) {
         event.preventDefault();
-        notify.error("Sorry, this editor can't accept images");
+        // notify.error("Sorry, this editor can't accept images");
+        alert("Sorry, this editor can't accept images");
 
         return false;
     }
@@ -103,8 +85,9 @@ addEventListener("trix-attachment-add", async function(event) {
         data.append('resource_id', $editor.data('resourceId'));
         data.append('resource_temp_id', $editor.data('resourceTempId'));
 
-        let route = {name: 'editor-images.upload'};
+        // let route = {name: 'editor-images.upload'};
 
+        let route = {url: "/editor-images"}
         try {
             let progressActions = {
                 uploadProgress: function(e) {
@@ -119,7 +102,8 @@ addEventListener("trix-attachment-add", async function(event) {
 
             if (!response.success) {
                 attachment.remove();
-                notify.error("There was an error uploading that image - please try again");
+                // notify.error("There was an error uploading that image - please try again");
+                alert("There was an error uploading that image - please try again - unsuccessful response");
 
                 return;
             }
@@ -129,7 +113,9 @@ addEventListener("trix-attachment-add", async function(event) {
                 href: response.data.url
             });
         } catch (e) {
-            notify.error("There was an error uploading that image - please try again");
+            // notify.error("There was an error uploading that image - please try again");
+            alert("There was an error uploading that image - please try again");
+            console.log(e);
             attachment.remove();
         }
     }

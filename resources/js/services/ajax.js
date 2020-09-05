@@ -3,8 +3,8 @@
  */
 
 let $       = require('jquery');
-/*let meta    = require('Services/meta');
-let notify  = require('Services/notify');*/
+let meta    = require('Services/meta');
+/*let notify  = require('Services/notify');*/
 
 // let routing = require('Services/routing');
 
@@ -17,7 +17,9 @@ function ajaxRequest(method, route, data, multipart, additionalProperties) {
 
     return new Promise((resolve, reject) => {
 
-        url = routing.getUrl(route);
+        // url = routing.getUrl(route);
+
+        url = route.url;
 
         let ajaxData = {
             url     : url,
@@ -28,7 +30,8 @@ function ajaxRequest(method, route, data, multipart, additionalProperties) {
                 if (!response.success) {
 
                     if (response.errors.length > 0) {
-                        notify.error(response.errors.join("\n"));
+                        // notify.error(response.errors.join("\n"));
+                        alert(response.errors.join("\n"));
                     }
 
                     reject(response);

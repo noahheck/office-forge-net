@@ -54,6 +54,7 @@ class ArticleController extends Controller
             $request->has('published'),
             $request->summary,
             $request->content,
+            $request->temp_id,
             $request->user()
         ));
 
@@ -97,7 +98,7 @@ class ArticleController extends Controller
             $request->subtitle,
             $request->slug,
             $request->date,
-            $request->published,
+            $request->has('published'),
             $request->summary,
             $request->content
         ));

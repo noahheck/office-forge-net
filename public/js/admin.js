@@ -12312,17 +12312,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /**
  * js/component/trix.js
  */
-// let $ = require('jquery');
-//
-// let trix = require('./../../../node_modules/trix/dist/trix.js');
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 var trix = __webpack_require__(/*! ./../../../node_modules/trix/dist/trix.js */ "./node_modules/trix/dist/trix.js");
 
 var ajax = __webpack_require__(/*! Services/ajax */ "./resources/js/services/ajax.js"); // let notify = require('Services/notify');
+// Make top-level heading an h2 element
 
-
-console.log(trix); // Make top-level heading an h2 element
 
 trix.config.blockAttributes.heading1.tagName = 'h2'; // Add sub-heading as h3 element
 
@@ -12352,16 +12348,18 @@ addEventListener("trix-file-accept", function (event) {
   var isImage = fileType.substring(0, 5) === "image";
 
   if (!isImage) {
-    event.preventDefault();
-    notify.error("Sorry, this editor can't accept that file");
+    event.preventDefault(); // notify.error("Sorry, this editor can't accept that file");
+
+    alert("Sorry, this editor can't accept that file");
     return false;
   }
 
   var acceptsImages = $(editor).data("acceptImages");
 
   if (!acceptsImages) {
-    event.preventDefault();
-    notify.error("Sorry, this editor can't accept images");
+    event.preventDefault(); // notify.error("Sorry, this editor can't accept images");
+
+    alert("Sorry, this editor can't accept images");
     return false;
   }
 });
@@ -12376,7 +12374,7 @@ addEventListener("trix-attachment-add", /*#__PURE__*/function () {
             }
 
             if (!event.attachment.file) {
-              _context.next = 28;
+              _context.next = 29;
               break;
             }
 
@@ -12388,9 +12386,10 @@ addEventListener("trix-attachment-add", /*#__PURE__*/function () {
             data.append('file', file);
             data.append('resource_type', $editor.data('resourceType'));
             data.append('resource_id', $editor.data('resourceId'));
-            data.append('resource_temp_id', $editor.data('resourceTempId'));
+            data.append('resource_temp_id', $editor.data('resourceTempId')); // let route = {name: 'editor-images.upload'};
+
             route = {
-              name: 'editor-images.upload'
+              url: "/editor-images"
             };
             _context.prev = 12;
             progressActions = {
@@ -12412,8 +12411,9 @@ addEventListener("trix-attachment-add", /*#__PURE__*/function () {
               break;
             }
 
-            attachment.remove();
-            notify.error("There was an error uploading that image - please try again");
+            attachment.remove(); // notify.error("There was an error uploading that image - please try again");
+
+            alert("There was an error uploading that image - please try again - unsuccessful response");
             return _context.abrupt("return");
 
           case 21:
@@ -12421,16 +12421,18 @@ addEventListener("trix-attachment-add", /*#__PURE__*/function () {
               url: response.data.url,
               href: response.data.url
             });
-            _context.next = 28;
+            _context.next = 29;
             break;
 
           case 24:
             _context.prev = 24;
             _context.t0 = _context["catch"](12);
-            notify.error("There was an error uploading that image - please try again");
+            // notify.error("There was an error uploading that image - please try again");
+            alert("There was an error uploading that image - please try again");
+            console.log(_context.t0);
             attachment.remove();
 
-          case 28:
+          case 29:
           case "end":
             return _context.stop();
         }
@@ -12473,8 +12475,9 @@ addEventListener("trix-attachment-remove", /*#__PURE__*/function () {
  * js/services/ajax.js
  */
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/*let meta    = require('Services/meta');
-let notify  = require('Services/notify');*/
+
+var meta = __webpack_require__(/*! Services/meta */ "./resources/js/services/meta.js");
+/*let notify  = require('Services/notify');*/
 // let routing = require('Services/routing');
 
 
@@ -12483,7 +12486,8 @@ var ajax = {};
 function ajaxRequest(method, route, data, multipart, additionalProperties) {
   additionalProperties = typeof additionalProperties === "undefined" ? {} : additionalProperties;
   return new Promise(function (resolve, reject) {
-    url = routing.getUrl(route);
+    // url = routing.getUrl(route);
+    url = route.url;
     var ajaxData = {
       url: url,
       dataType: 'json',
@@ -12492,7 +12496,8 @@ function ajaxRequest(method, route, data, multipart, additionalProperties) {
       success: function success(response) {
         if (!response.success) {
           if (response.errors.length > 0) {
-            notify.error(response.errors.join("\n"));
+            // notify.error(response.errors.join("\n"));
+            alert(response.errors.join("\n"));
           }
 
           reject(response);
@@ -12554,6 +12559,46 @@ ajax.get = function (route, data) {
 
 window.ajax = ajax;
 module.exports = ajax;
+
+/***/ }),
+
+/***/ "./resources/js/services/meta.js":
+/*!***************************************!*\
+  !*** ./resources/js/services/meta.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * js/services/meta.js
+ *
+ * Loads content from html meta tags with the data-piglet attribute (i.e. those created with the Blade directive)
+ * - loads all tags into memory on page load and wraps in the closure to prevent modification
+ */
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var metaData = {};
+var meta = {};
+
+meta.get = function (name, fallback) {
+  return metaData[name] ? metaData[name] : fallback;
+};
+
+$(function () {
+  $("meta").each(function () {
+    var $this = $(this);
+    var name = $this.attr('name');
+    var content = $this.attr('content');
+
+    if ($this.data('json')) {
+      content = JSON.parse(content);
+    }
+
+    metaData[name] = content;
+  });
+});
+window.meta = meta;
+module.exports = meta;
 
 /***/ }),
 

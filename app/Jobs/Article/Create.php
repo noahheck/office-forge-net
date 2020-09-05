@@ -18,6 +18,7 @@ class Create
     private $published;
     private $summary;
     private $content;
+    private $resource_temp_id;
     private $author;
 
     private $article;
@@ -35,6 +36,7 @@ class Create
         $published,
         $summary,
         $content,
+        $resource_temp_id,
         User $author
     ) {
         $this->title = $title;
@@ -44,6 +46,7 @@ class Create
         $this->published = $published;
         $this->summary = $summary;
         $this->content = $content;
+        $this->resource_temp_id = $resource_temp_id;
         $this->author = $author;
     }
 
@@ -70,6 +73,8 @@ class Create
         $article->author_id = $this->author->id;
 
         $article->save();
+
+        $article->claimTemporaryEditorImages($this->resource_temp_id);
 
         $this->article = $article;
     }

@@ -11,6 +11,10 @@ $adminRouteActive = Route::is('admin') ? 'active' : '';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <!-- CSRF Token -->
+    @meta('csrf-token', csrf_token())
+
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="Office Forge">
     <meta property="og:type" content="website">
