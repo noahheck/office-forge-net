@@ -2,11 +2,9 @@
  * sass/trix.scss
  */
 
-//@import "settings";
-@import "variables";
 @import "mixins";
-
 @import '~trix/dist/trix.css';
+
 
 trix-toolbar {
 

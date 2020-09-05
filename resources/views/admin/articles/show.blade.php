@@ -46,7 +46,9 @@ admin-articles-show
 
             <hr>
 
-            {!! App\safe_text_editor_content($article->content) !!}
+            <div class="editor-content">
+                {!! App\safe_text_editor_content($article->content) !!}
+            </div>
 
         </div>
 

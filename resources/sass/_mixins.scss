@@ -2,7 +2,6 @@
  * sass/_mixins.scss
  */
 
-@import "variables";
 @import "~bootstrap/scss/mixins/breakpoints";
 
 @mixin overflow-ellipsis {
@@ -93,9 +92,8 @@
     @include border-radius(1500px);
 }
 
-@mixin shadow($offsetX: 2px, $offsetY: 4px, $blurRadius: 5px, $spreadRadius: 0, $color: rgba(0,0,0,0.5)) {
+@mixin shadow($offsetX: 2px, $offsetY: 4px, $blurRadius: 12px, $spreadRadius: 1px, $color: #d9d9d9) {
     -webkit-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
     -moz-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
     box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
 }
-
