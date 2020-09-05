@@ -3,10 +3,15 @@
 @php
 $__adminRouteActive = Route::is('admin') ? 'active' : '';
 $__subscriberRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.subscribers') ? 'active' :'';
+$__articleRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.articles') ? 'active' :'';
 @endphp
 
 @push('styles')
     <link rel="stylesheet" type="text/css" href="{{ mix('css/admin.css') }}">
+@endpush
+
+@push('scripts')
+    <script type="text/javascript" src="{{ mix('js/admin.js') }}"></script>
 @endpush
 
 @section('content')
@@ -20,6 +25,7 @@ $__subscriberRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.sub
                 <div class="list-group admin-nav-menu mb-3">
                     <a class="list-group-item list-group-item-action {{ $__adminRouteActive }}" href="{{ route('admin') }}">Admin Home</a>
                     <a class="list-group-item list-group-item-action {{ $__subscriberRouteActive }}" href="{{ route('admin.subscribers.index') }}">Subscribers</a>
+                    <a class="list-group-item list-group-item-action {{ $__articleRouteActive }}" href="{{ route('admin.articles.index') }}">Articles</a>
                     <a class="list-group-item list-group-item-action" href="{{ route('logout') }}">Logout</a>
                 </div>
 

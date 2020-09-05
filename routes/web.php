@@ -28,15 +28,23 @@ Route::middleware(ProtectAgainstSpam::class)->group(function() {
     Auth::routes(['register' => false]);
 });
 
+// Editor images have to be public in order to display them in the articles
+Route::get('/editor-images/{editorImage}', 'EditorImageController@show')->name('editor-images.show');
+
+
 Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::middleware(['auth'])->group(function() {
 
     Route::get('/admin', 'AdminController@index')->name('admin');
 
-    Route::namespace('Admin')->name('admin.')->group(function() {
+    Route::post('/editor-images', 'EditorImageController@upload')->name('editor-images.upload');
+
+    Route::namespace('Admin')->name('admin.')->prefix('admin/')->group(function() {
 
         Route::resource('/subscribers', 'SubscriberController');
+
+        Route::resource('/articles', 'ArticleController');
     });
 
 });

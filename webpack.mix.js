@@ -12,9 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix
-    // .version()
+    .version()
     .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css/app.css')
+
+    .js('resources/js/admin.js', 'public/js')
     .sass('resources/sass/admin.scss', 'public/css/admin.css')
 
 ;
@@ -22,6 +24,19 @@ mix
 /*mix.extract([
     'jquery'
 ]);*/
+
+
+mix.webpackConfig({
+    resolve: {
+        alias: {
+            Services : path.resolve(__dirname, "resources/js/services"),
+            Component: path.resolve(__dirname, "resources/js/component"),
+            // Css      : path.resolve(__dirname, "resources/sass"),
+            // Modules  : path.resolve(__dirname, "node_modules")
+            // NodeModules  : path.resolve(__dirname, 'node_modules')
+        }
+    }
+});
 
 
 mix.disableNotifications();

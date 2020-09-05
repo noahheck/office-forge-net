@@ -1,3 +1,18 @@
+/**
+ * sass/_variable.scss
+ */
+
+
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+
 // Body
 $body-bg: #f8fafc;
 
@@ -6,7 +21,10 @@ $font-family-sans-serif: sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+$total-header-height: 61px;
+
 // Colors
+$white: #fff;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
@@ -17,3 +35,29 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$light-gray: #e3e3e3;
+$medium-gray: #ccc;
+$medium-dark-gray: #999;
+
+
+
+
+
+$light-white: #fefefe;
+$medium-white: #fcfcfc;
+$dark-white: #f9f9f9;
+$light-gray: #e3e3e3;
+$med-light-gray: #d6d6d6;
+$medium-gray: #c9c9c9;
+$med-dark-gray: #999;
+$dark-gray: #666;
+
+$black: #090909;
+
+$blue-highlight: #e3f3ff;
+$purple-highlight: #fff3ff;
+$green-highlight: #f3fff3;
+$orange-highlight: #fff3e3;
+$red-highlight: #fff3f3;
+$red-highlight-transparent: rgba(255, 236, 236, .85);
