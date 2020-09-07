@@ -105,6 +105,9 @@
                     <li>
                         <a href={{ route('pricing') }}>Pricing</a>
                     </li>
+                    <li>
+                        <a href={{ route('blog') }}>Blog</a>
+                    </li>
                 </ul>
             </div>
 
