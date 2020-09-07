@@ -306,12 +306,11 @@ body {
 .blog-article {
 
     min-height: calc(100vh - 135px);
-    background-color: $of-dark-lighter;
 
     background-image: radial-gradient(
             ellipse at center,
             $white,
-            $light-gray
+            $dark-white
     );
 
     .article {

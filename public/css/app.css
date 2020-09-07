@@ -11765,8 +11765,7 @@ body {
 
 .blog-article {
   min-height: calc(100vh - 135px);
-  background-color: #394047;
-  background-image: radial-gradient(ellipse at center, #fff, #e3e3e3);
+  background-image: radial-gradient(ellipse at center, #fff, #fcfcfc);
 }
 
 .blog-article .article {
