@@ -19,6 +19,16 @@ class Article extends Model
         'published' => 'boolean',
     ];
 
+    public function scopePublished($query)
+    {
+        return $query->where('published', true)->orderBy('date', 'DESC');
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function author()
     {
         return $this->belongsTo(User::class);

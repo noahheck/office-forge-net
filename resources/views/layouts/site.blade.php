@@ -1,8 +1,11 @@
 @php
-$homeRouteActive = Route::is('home') ? 'active' : '';
-$featuresRouteActive = Route::is('features') ? 'active' : '';
-$pricingRouteActive = Route::is('pricing') ? 'active' : '';
-$adminRouteActive = Route::is('admin') ? 'active' : '';
+    $__currentRouteName    = Route::currentRouteName();
+
+    $homeRouteActive = Route::is('home') ? 'active' : '';
+    $featuresRouteActive = Route::is('features') ? 'active' : '';
+    $pricingRouteActive = Route::is('pricing') ? 'active' : '';
+    $blogRouteActive = Str::startsWith($__currentRouteName, 'blog') ? 'active' : '';
+    $adminRouteActive = Str::startsWith($__currentRouteName, 'admin') ? 'active' : '';
 @endphp
 <!DOCTYPE html>
 <html lang="en">
@@ -15,11 +18,13 @@ $adminRouteActive = Route::is('admin') ? 'active' : '';
     <!-- CSRF Token -->
     @meta('csrf-token', csrf_token())
 
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Office Forge">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://officeforge.net/images/of_logo_500.png">
-    <meta property="og:description" content="At Office Forge, we believe nobody knows your business as well as you do. Our goal is to give you software that works the way you work.">
+    @section('og-tags')
+        <meta property="og:url" content="{{ url()->current() }}">
+        <meta property="og:title" content="Office Forge">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://officeforge.net/images/of_logo_500.png">
+        <meta property="og:description" content="At Office Forge, we believe nobody knows your business as well as you do. Our goal is to give you software that works the way you work.">
+    @show
 
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
 
@@ -67,6 +72,7 @@ $adminRouteActive = Route::is('admin') ? 'active' : '';
                 <a class="nav-item nav-link {{ $homeRouteActive }}" href="{{ route('home') }}">Home</a>
                 <a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
                 <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
+                <a class="nav-item nav-link {{ $blogRouteActive }}" href="{{ route('blog') }}">Blog</a>
             </div>
             @auth
                 <div class="navbar-nav">

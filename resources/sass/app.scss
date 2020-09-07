@@ -279,3 +279,55 @@ body {
     }
 
 }
+
+
+.blog-list {
+
+    .jumbotron {
+        a {
+            color: $white;
+        }
+    }
+
+    a.card {
+        color: $black;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+
+            h2 {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.blog-article {
+
+    min-height: calc(100vh - 135px);
+    background-color: $of-dark-lighter;
+
+    background-image: radial-gradient(
+            ellipse at center,
+            $white,
+            $light-gray
+    );
+
+    .article {
+        padding: 15px;
+        background-color: $white;
+
+        @include shadow();
+
+        h3 {
+            color: $dark-gray;
+        }
+
+        .article-footer {
+            font-style: italic;
+            color: $dark-gray;
+        }
+    }
+
+}

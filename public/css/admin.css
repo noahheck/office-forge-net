@@ -604,6 +604,10 @@ label {
   color: #495057;
 }
 
+.admin-container .admin-overview-card {
+  margin-bottom: 15px;
+}
+
 .admin-container .admin-overview-card .card-header h4 {
   margin-bottom: 0;
 }

@@ -53,7 +53,7 @@ class ArticleController extends Controller
             $request->date,
             $request->has('published'),
             $request->summary,
-            $request->content,
+            $request->input('content'),
             $request->temp_id,
             $request->user()
         ));
@@ -100,7 +100,7 @@ class ArticleController extends Controller
             $request->date,
             $request->has('published'),
             $request->summary,
-            $request->content
+            $request->input('content')
         ));
 
         return redirect()->route('admin.articles.index');
