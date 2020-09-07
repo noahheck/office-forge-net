@@ -26,6 +26,7 @@ class Update extends FormRequest
         return [
             'title' => 'required',
             'slug' => 'required|unique:App\Article,id,' . $this->article->id,
+            'date' => 'required_with:published',
         ];
     }
 }

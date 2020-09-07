@@ -26,6 +26,7 @@ class Store extends FormRequest
         return [
             'title' => 'required',
             'slug' => 'required|unique:App\Article',
+            'date' => 'required_with:published',
         ];
     }
 }
