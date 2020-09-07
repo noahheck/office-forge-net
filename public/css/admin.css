@@ -617,3 +617,12 @@ label {
   color: #3490dc;
 }
 
+.admin-container .page-card-header h1,
+.admin-container .page-card-header h2,
+.admin-container .page-card-header h3,
+.admin-container .page-card-header h4,
+.admin-container .page-card-header h5,
+.admin-container .page-card-header h6 {
+  margin-bottom: 0;
+}
+

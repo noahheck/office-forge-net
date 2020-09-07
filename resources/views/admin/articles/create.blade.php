@@ -10,7 +10,7 @@ index
 
         <div class="col-12">
             <div class="card shadow-sm">
-                <div class="card-header">
+                <div class="card-header page-card-header">
                     <h4>New Article</h4>
                 </div>
                 <div class="card-body">
