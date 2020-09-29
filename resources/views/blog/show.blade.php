@@ -20,7 +20,7 @@ blog-article
 
             <div class="row justify-content-center mb-5">
 
-                <div class="col-12 col-md-9 col-lg-9 pt-sm-5">
+                <div class="col-12 col-md-11 pt-sm-3">
 
                         <h2>{{ $article->title }}</h2>
 
