@@ -34,6 +34,12 @@ blog-list
                         <span class="text-muted">{{ \App\format_date($latestArticle->date) }}</span>
                         <br>
                         {!! nl2br(e($latestArticle->summary)) !!}
+
+                        <br><br>
+
+                        <a href="{{ route('blog.article', [$latestArticle]) }}">
+                            <em>Read more...</em>
+                        </a>
                     </p>
                 </div>
 
@@ -59,7 +65,10 @@ blog-list
                                 <h3>{{ $article->subtitle }}</h3>
                             @endif
 
+                            <p class="text-muted">{{ \App\format_date($article->date) }}</p>
                             <p>{!! nl2br(e($article->summary)) !!}</p>
+
+                            <em class="read-more">Read more...</em>
 
                         </div>
 

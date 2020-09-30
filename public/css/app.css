@@ -11759,7 +11759,8 @@ body {
   text-decoration: none;
 }
 
-.blog-list a.card:hover h2 {
+.blog-list a.card:hover h2,
+.blog-list a.card:hover .read-more {
   text-decoration: underline;
 }
 
