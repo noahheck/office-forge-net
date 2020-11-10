@@ -4,6 +4,7 @@
 $__adminRouteActive = Route::is('admin') ? 'active' : '';
 $__subscriberRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.subscribers') ? 'active' :'';
 $__articleRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.articles') ? 'active' :'';
+$__mailingRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.mailings') ? 'active' :'';
 @endphp
 
 @push('styles')
@@ -26,6 +27,7 @@ $__articleRouteActive = Str::startsWith(Route::currentRouteName(), 'admin.articl
                     <a class="list-group-item list-group-item-action {{ $__adminRouteActive }}" href="{{ route('admin') }}">Admin Home</a>
                     <a class="list-group-item list-group-item-action {{ $__subscriberRouteActive }}" href="{{ route('admin.subscribers.index') }}">Subscribers</a>
                     <a class="list-group-item list-group-item-action {{ $__articleRouteActive }}" href="{{ route('admin.articles.index') }}">Articles</a>
+                    <a class="list-group-item list-group-item-action {{ $__mailingRouteActive }}" href="{{ route('admin.mailings.index') }}">Mailings</a>
                     <a class="list-group-item list-group-item-action" href="{{ route('logout') }}">Logout</a>
                 </div>
 

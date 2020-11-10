@@ -37266,6 +37266,18 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+$(function () {
+  $('.delete-form').submit(function (e) {
+    var item = $(this).data('deleteItem');
+
+    if (!confirm("Are you sure you want to delete this " + item + "?")) {
+      e.preventDefault();
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

@@ -19,6 +19,7 @@ mix
     .js('resources/js/admin.js', 'public/js')
     .sass('resources/sass/admin.scss', 'public/css/admin.css')
 
+    .js('resources/js/admin/mailings/_form.js', 'public/js/admin.mailings._form.js')
 ;
 
 /*mix.extract([

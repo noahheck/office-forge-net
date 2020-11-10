@@ -48,6 +48,8 @@ Route::middleware(['auth'])->group(function() {
         Route::resource('/subscribers', 'SubscriberController');
 
         Route::resource('/articles', 'ArticleController');
+
+        Route::resource('/mailings', 'MailingController');
     });
 
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Mailing;
 use App\Subscriber;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class AdminController extends Controller
     {
         $subscriberCount = Subscriber::count();
         $articleCount    = Article::count();
+        $mailingCount    = Mailing::count();
 
-        return view('admin.index', compact('subscriberCount', 'articleCount'));
+        return view('admin.index', compact('subscriberCount', 'articleCount', 'mailingCount'));
     }
 }

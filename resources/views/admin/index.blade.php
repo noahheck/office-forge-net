@@ -30,6 +30,17 @@ index
             </div>
         </div>
 
+        <div class="col-12 col-md-6">
+            <div class="card shadow-sm admin-overview-card">
+                <div class="card-header">
+                    <h4>Mailings ({{ $mailingCount }})</h4>
+                </div>
+                <a class="card-body" href="{{ route('admin.mailings.index') }}">
+                    <span class="fas fa-paper-plane icon"></span>
+                </a>
+            </div>
+        </div>
+
     </div>
 
 @endsection

@@ -12,4 +12,9 @@ class Subscriber extends Model
     protected $casts = [
         'verified' => 'boolean',
     ];
+
+    public function mailings()
+    {
+        return $this->belongsToMany(Mailing::class);
+    }
 }
