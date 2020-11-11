@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -10970,38 +10970,36 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./resources/js/admin/mailings/_form.js":
-/*!**********************************************!*\
-  !*** ./resources/js/admin/mailings/_form.js ***!
-  \**********************************************/
+/***/ "./resources/js/admin/mailings/show.js":
+/*!*********************************************!*\
+  !*** ./resources/js/admin/mailings/show.js ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * js/admin/mailings/_form.js
+ * js/admin/mailings/show.js
  */
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 $(function () {
-  var bodyTextField = $("#body_text");
-  var trixEditor = $('#mailing_body_html__editor');
-  var editor = trixEditor[0].editor;
-  trixEditor.on("trix-change", function () {
-    var textContent = editor.getDocument().toString();
-    bodyTextField.val(textContent);
+  $('#sendMailingForm').submit(function (event) {
+    if (!confirm("Are you sure you want to send this Mailing?\n\nOnce sent, this can't be undone!")) {
+      event.preventDefault();
+    }
   });
 });
 
 /***/ }),
 
-/***/ 3:
-/*!****************************************************!*\
-  !*** multi ./resources/js/admin/mailings/_form.js ***!
-  \****************************************************/
+/***/ 2:
+/*!***************************************************!*\
+  !*** multi ./resources/js/admin/mailings/show.js ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/noah/Source/noahheck/office-forge-net/resources/js/admin/mailings/_form.js */"./resources/js/admin/mailings/_form.js");
+module.exports = __webpack_require__(/*! /home/noah/Source/noahheck/office-forge-net/resources/js/admin/mailings/show.js */"./resources/js/admin/mailings/show.js");
 
 
 /***/ })

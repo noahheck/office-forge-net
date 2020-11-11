@@ -4,6 +4,10 @@
 admin-mailings-show
 @endsection
 
+@push('scripts')
+    <script src="{{ mix('js/admin.mailings.show.js') }}"></script>
+@endpush
+
 @section('admin-content')
 
     <div class="row">
@@ -14,11 +18,13 @@ admin-mailings-show
 
                 <h1 class="flex-grow-1">{{ $mailing->subject }}</h1>
 
-                <div class="flex-grow-0 ">
-                    <a class="btn btn-primary btn-sm" href="{{ route('admin.mailings.edit', [$mailing]) }}">
-                        <span class="fas fa-edit mr-2"></span>Edit
-                    </a>
-                </div>
+                @unless($mailing->hasBeenSent())
+                    <div class="flex-grow-0 ">
+                        <a class="btn btn-primary btn-sm" href="{{ route('admin.mailings.edit', [$mailing]) }}">
+                            <span class="fas fa-edit mr-2"></span>Edit
+                        </a>
+                    </div>
+                @endunless
 
             </div>
 
@@ -27,11 +33,14 @@ admin-mailings-show
             <h5>
                 @if ($mailing->hasBeenSent())
                     <span title="Sent" class="far fa-check-square"></span>
-                    Sent - {{ \App\format_datetime($mailing->sent_at) }}
+                    Sent
+                    to {{ $mailing->subscribers()->count() }} subscribers
+                    - {{ \App\format_datetime($mailing->sent_at) }}
+                    by {{ $mailing->sentBy->name }}
                 @else
                     <span title="Not sent" class="far fa-square"></span>
                     Not Sent
-                    <form class="d-inline" action="{{ route('admin.mailings.send', [$mailing]) }}" method="POST">
+                    <form class="d-inline" action="{{ route('admin.mailings.send', [$mailing]) }}" method="POST" id="sendMailingForm">
                         @csrf
                         <button type="submit" class="btn btn-sm btn-outline-success">
                             <span class="fas fa-paper-plane"></span> Send to {{ $subscriberCount }} subscribers now

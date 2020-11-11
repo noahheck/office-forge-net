@@ -76,6 +76,10 @@ class MailingController extends Controller
      */
     public function edit(Mailing $mailing)
     {
+        if ($mailing->hasBeenSent()) {
+            return redirect()->route('admin.mailings.index');
+        }
+
         return view('admin.mailings.edit', compact('mailing'));
     }
 
@@ -106,6 +110,10 @@ class MailingController extends Controller
      */
     public function destroy(Mailing $mailing)
     {
+        if ($mailing->hasBeenSent()) {
+
+            return redirect()->route('admin.mailings.index');
+        }
         $mailing->delete();
 
         return redirect()->route('admin.mailings.index');
