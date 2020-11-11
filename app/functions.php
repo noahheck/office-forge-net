@@ -9,7 +9,22 @@ function format_date($date) {
         return '';
     }
 
-    return $date->format('m/d/Y');
+    return $date->setTimezone('America/Denver')->format('m/d/Y');
+}
+
+function format_datetime($datetime) {
+    if (!$datetime) {
+        return '';
+    }
+
+    $datetime = $datetime->setTimezone('America/Denver');
+
+    $return = $datetime->format('m/d/Y g:ia');
+    $isDst = $datetime->isDST();
+
+    $return .= ($isDst) ? ' MDT' : ' MST';
+
+    return $return;
 }
 
 function temp_id() {

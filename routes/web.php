@@ -50,6 +50,7 @@ Route::middleware(['auth'])->group(function() {
         Route::resource('/articles', 'ArticleController');
 
         Route::resource('/mailings', 'MailingController');
+        Route::post('/mailings/{mailing}/send', 'MailingController@send')->name('mailings.send');
     });
 
 });

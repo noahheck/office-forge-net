@@ -15,6 +15,6 @@ class Subscriber extends Model
 
     public function mailings()
     {
-        return $this->belongsToMany(Mailing::class);
+        return $this->belongsToMany(Mailing::class, 'mailings_subscribers');
     }
 }

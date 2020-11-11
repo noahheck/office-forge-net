@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Article::class, 'author_id');
     }
+
+    public function sentMailings()
+    {
+        return $this->hasMany(Mailing::class, 'sent_by');
+    }
 }

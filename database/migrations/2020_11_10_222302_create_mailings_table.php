@@ -22,6 +22,7 @@ class CreateMailingsTable extends Migration
 
             $table->timestamps();
             $table->dateTime('sent_at')->nullable();
+            $table->bigInteger('sent_by')->nullable();
             $table->softDeletes();
         });
 

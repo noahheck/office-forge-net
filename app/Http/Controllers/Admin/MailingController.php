@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Mailings\Store as StoreRequest;
 use App\Http\Requests\Admin\Mailings\Update as UpdateRequest;
 use App\Jobs\Mailing\Create;
+use App\Jobs\Mailing\Send;
 use App\Jobs\Mailing\Update;
 use App\Mailing;
+use App\Subscriber;
 use Illuminate\Http\Request;
 
 class MailingController extends Controller
@@ -61,7 +63,9 @@ class MailingController extends Controller
      */
     public function show(Mailing $mailing)
     {
-        return view('admin.mailings.show', compact('mailing'));
+        $subscriberCount = Subscriber::count();
+
+        return view('admin.mailings.show', compact('mailing', 'subscriberCount'));
     }
 
     /**
@@ -107,5 +111,23 @@ class MailingController extends Controller
         return redirect()->route('admin.mailings.index');
     }
 
-    
+    /**
+     * Send the mailing to all subscribers
+     *
+     * @param \App\Mailing $mailing
+     * @return \Illuminate\Http\Response
+     */
+    public function send(Request $request, Mailing $mailing)
+    {
+        if ($mailing->hasBeenSent()) {
+
+            return redirect()->route('admin.mailings.index');
+        }
+
+        $subscribers = Subscriber::all();
+
+        $this->dispatchNow($mailingSent = new Send($mailing, $request->user(), $subscribers));
+
+        return redirect()->route('admin.mailings.index');
+    }
 }
