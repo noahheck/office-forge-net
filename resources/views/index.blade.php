@@ -87,59 +87,7 @@ index
             </div>
 
         </div>
-
-    </div>
-
-    <div class="of-bg-dark mb-5">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-12 col-sm-11 pt-3 order-first">
-
-                    <h3>Business Management in a Connected World</h3>
-                    <h4>Forging Your Digital Toolbox</h4>
-
-                </div>
-
-                <div class="col-12 col-sm-11 col-lg-5 ssspy-5 order-1 order-lg-2">
-                    <img src="{{ asset('images/iwbc_ss_bmcw_768.png') }}" alt="The Idaho Women's Business Center presents Strategic Sessions - Business Management in a Connected World by Noah Heck - Owner of Pillar Falls Software, LLC and Office Forge lead.">
-                </div>
-
-                <div class="col-12 col-sm-11 col-lg-6 ssspt-lg-5 order-2 order-lg-1">
-
-                    <p>In association with the <a href="https://idahowomen.org/" target="_blank">Idaho Women's Business Center</a>, we're pleased to be welcomed to present a free webinar on Thursday November 19, 2020 at 11:00 AM (MST)!</p>
-                    <p>
-                        <strong>Date:</strong> November 19, 2020<br>
-                        <strong>Time:</strong> 11:00 AM (MST)<br>
-                        <strong>Cost:</strong> Free!<br>
-                        <a href="https://mms.idahowomen.us/members/evr/reg_event.php?evid=3356513&orgcode=IWBC" target="_blank">Registration</a>
-                    </p>
-                </div>
-
-                <div class="col-12 col-sm-11 col-lg-10 pt-lg-4 order-3">
-
-                    <blockquote class="p-3">
-                        Today, we see more and more of our business activities being carried out online: ordering from suppliers, following up with customers, communicating with our teams, and more. This shift has created massive opportunities to improve our businesses, and has demonstrated it's value over the last several months as the world responds to COVID-19. However, it can also be frustrating trying to filter through and piece together different tools to help you actually get your work done.
-                        <br><br>
-                        Join us as we cut through the corporate speak and explore the different types of tools available to you and how they can help you run your business more effectively.
-                    </blockquote>
-
-                    <p>This is a free event, and everybody is welcome to attend! The event will be delivered via <a href="https://zoom.us/" target="_blank">Zoom</a>. Find out all the details and register to attend by checking out the <a href="https://mms.idahowomen.us/members/evr/reg_event.php?evid=3356513&orgcode=IWBC" target="_blank">Event Page</a>!</p>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="container">
-
+        
         <div class="row justify-content-center">
 
             <div class="col-12 col-md-10">
