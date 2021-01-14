@@ -12290,6 +12290,15 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 __webpack_require__(/*! Component/trix */ "./resources/js/component/trix.js");
 
+$(function () {
+  $(".delete-subscriber-form").submit(function (event) {
+    if (!confirm("Are you sure you want to delete this subscriber?")) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/component/trix.js":

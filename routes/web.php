@@ -22,7 +22,12 @@ Route::post('/subscribe-to-updates', 'SubscriberController@subscribe')
     ->name('subscribe')
     ->middleware(ProtectAgainstSpam::class);
 
-Route::get('/subscribed', 'SubscriberController@subscribed')->name('subscribed');
+Route::get('/subscribed', 'SubscriberController@subscribed')
+    ->name('subscribed');
+
+Route::middleware('signed')
+    ->get('/verify/7ab398ce7f34d9329/{subscriber}', 'SubscriberController@verify')
+    ->name('verify_subscriber');
 
 Route::middleware(ProtectAgainstSpam::class)->group(function() {
     Auth::routes(['register' => false]);
@@ -46,6 +51,7 @@ Route::middleware(['auth'])->group(function() {
     Route::namespace('Admin')->name('admin.')->prefix('admin/')->group(function() {
 
         Route::resource('/subscribers', 'SubscriberController');
+        Route::post('/subscribers/{subscriber}/verify', 'SubscriberController@verify')->name('subscribers.verify');
 
         Route::resource('/articles', 'ArticleController');
 

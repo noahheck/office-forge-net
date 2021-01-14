@@ -11745,7 +11745,8 @@ img {
   background-color: #23262b;
 }
 
-.subscribed .mail-icon {
+.subscribed .mail-icon,
+.verified .mail-icon {
   font-size: 128px;
   color: #3490dc;
 }

@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('page')
-subscribed
+verified
 @endsection
 
 @section('content')
@@ -19,8 +19,8 @@ subscribed
                 </div>
 
                 <div class="col-12 col-md-6 order-md-1 headings-container">
-                    <p>Your email address ({{ session('email') }}) has been registered.</p>
-                    <p>Please check your email inbox and follow the verification link we've sent you.</p>
+                    <p>Your email address ({{ $email }}) has been verified.</p>
+                    <p>We'll only send you the kinds of things we would like to get, and we'll never give away or sell your information to anyone.</p>
                 </div>
 
             </div>

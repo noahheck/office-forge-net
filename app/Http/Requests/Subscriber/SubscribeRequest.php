@@ -24,7 +24,8 @@ class SubscribeRequest extends FormRequest
     public function rules()
     {
         return [
-            'subscriber_email' => 'required|email|unique:subscribers,email',
+            // Structure of unique validation fields: https://stackoverflow.com/a/45139017/2422852
+            'subscriber_email' => 'required|email|unique:subscribers,email,NULL,id,deleted_at,NULL',
             'confirm_subscription' => 'required',
         ];
     }

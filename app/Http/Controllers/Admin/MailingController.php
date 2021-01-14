@@ -63,7 +63,7 @@ class MailingController extends Controller
      */
     public function show(Mailing $mailing)
     {
-        $subscriberCount = Subscriber::count();
+        $subscriberCount = Subscriber::verified()->count();
 
         return view('admin.mailings.show', compact('mailing', 'subscriberCount'));
     }
@@ -132,7 +132,7 @@ class MailingController extends Controller
             return redirect()->route('admin.mailings.index');
         }
 
-        $subscribers = Subscriber::all();
+        $subscribers = Subscriber::verified()->get();
 
         $this->dispatchNow($mailingSent = new Send($mailing, $request->user(), $subscribers));
 

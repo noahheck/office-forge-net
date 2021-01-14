@@ -87,4 +87,13 @@ class SubscriberController extends Controller
 
         return redirect()->route('admin.subscribers.index');
     }
+
+    public function verify(Subscriber $subscriber)
+    {
+        $subscriber->verified = true;
+
+        $subscriber->save();
+
+        return redirect()->route('admin.subscribers.index');
+    }
 }

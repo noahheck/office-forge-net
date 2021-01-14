@@ -13,6 +13,11 @@ class Subscriber extends Model
         'verified' => 'boolean',
     ];
 
+    public function scopeVerified($query)
+    {
+        return $query->where('verified', true);
+    }
+
     public function mailings()
     {
         return $this->belongsToMany(Mailing::class, 'mailings_subscribers');
