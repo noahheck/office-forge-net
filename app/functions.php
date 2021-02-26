@@ -3,13 +3,21 @@
 namespace App;
 
 use Illuminate\Support\Str;
+use NunoMaduro\Collision\Provider;
 
 function format_date($date) {
     if (!$date) {
         return '';
     }
 
-    return $date->setTimezone('America/Denver')->format('m/d/Y');
+    if (   !($date->hour == 0
+        && $date->minute == 0
+        && $date->second == 0)
+    ) {
+        $date->setTimezone('America/Denver');
+    }
+
+    return $date->format('m/d/Y');
 }
 
 function format_datetime($datetime) {

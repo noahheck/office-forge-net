@@ -28,6 +28,7 @@ index
                                 <th style="width: 100px;">Published</th>
                                 <th>Title</th>
                                 <th>Author</th>
+                                <th>Views</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,6 +47,9 @@ index
                                     </td>
                                     <td>
                                         {{ $article->author->name }}
+                                    </td>
+                                    <td>
+                                        {{ $article->views }}
                                     </td>
                                 </tr>
                             @endforeach

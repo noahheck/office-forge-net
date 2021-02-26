@@ -20,6 +20,12 @@ class BlogController extends Controller
 
     public function show(Article $article)
     {
+        abort_unless($article->published, 404);
+
+        $article->views++;
+
+        $article->save();
+
         return view('blog.show', compact('article'));
     }
 }

@@ -11816,9 +11816,15 @@ img {
 }
 
 .blog-article .article {
-  padding: 15px;
+  padding: 30px;
   background-color: #fff;
   box-shadow: 2px 4px 12px 1px #d9d9d9;
+}
+
+@media (min-width: 768px) {
+  .blog-article .article {
+    padding: 60px;
+  }
 }
 
 .blog-article .article h3 {

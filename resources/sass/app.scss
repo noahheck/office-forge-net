@@ -319,10 +319,14 @@ img {
     );
 
     .article {
-        padding: 15px;
+        padding: 30px;
         background-color: $white;
 
         @include shadow();
+
+        @include media-breakpoint-up(md) {
+            padding: 60px;
+        }
 
         h3 {
             color: $dark-gray;

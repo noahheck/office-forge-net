@@ -23,12 +23,6 @@ blog-list
 
             <div class="row">
 
-                {{--<div class="col-12 col-md-6 order-md-2 pricing-icon-container">
-
-                    <span class="fas fa-search-dollar"></span>
-
-                </div>--}}
-
                 <div class="col-12 col-md-12 order-md-1 pt-md-5">
                     <p>
                         <span class="text-muted">{{ \App\format_date($latestArticle->date) }}</span>
