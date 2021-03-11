@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $articles = Article::published()->take(3)->get();
+
+        $articles->load('author');
+
+        return view('index', compact('articles'));
     }
 
     public function features()

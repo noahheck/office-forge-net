@@ -102,11 +102,44 @@ index
 
         </div>
 
+        <div class="row mb-5 justify-content-center">
+
+            <div class="col-12 text-center mb-4">
+
+                <hr>
+
+                <h2>The Latest From Our Blog</h2>
+
+            </div>
+
+            @foreach ($articles as $article)
+
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card border-0 shadow h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ $article->title }}</h4>
+                            <h6 class="text-muted card-subtitle mb-3">{{ $article->author->name }}</h6>
+                            <p>{{ $article->summary }}</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0 text-right">
+
+                            <a class="card-link" href="{{ route('blog.article', [$article]) }}">
+                                Read More
+                                <span class="fas fa-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            @endforeach
+
+        </div>
+
         <div class="row justify-content-center mb-5">
 
             <div class="col-12 col-md-10">
 
-                <div class="card shadow">
+                <div class="card border-0 shadow">
 
                     <div class="card-body">
 
@@ -165,6 +198,10 @@ index
     <div class="container">
 
         <div class="row justify-content-center">
+
+            <div class="col-12">
+                <hr>
+            </div>
 
             <div class="col-12 col-md-10">
 
