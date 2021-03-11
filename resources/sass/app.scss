@@ -16,6 +16,7 @@ $of-blue: #3490dc;
 
 
 $dark-white: #fcfcfc;
+$darker-white: #f9f9f9;
 
 $light-gray: #e3e3e3;
 $medium-gray: #c9c9c9;
@@ -64,6 +65,37 @@ body {
         .active {
             border-bottom: 2px solid $of-blue;
         }
+    }
+
+    .solutions-dropdown {
+        padding: 0;
+        border-radius: 0;
+
+        .dropdown-item {
+
+            padding: 10px;
+
+            .icon-container {
+                font-size: 24px;
+                padding-right: 8px;
+                color: $of-dark-base;
+                display: flex;
+                align-items: center;
+            }
+
+            &:not(:first-child) {
+                border-top: 1px solid $light-gray;
+            }
+
+            &.active {
+                background-color: $darker-white;
+                color: black;
+                border-bottom: none;
+            }
+
+
+        }
+
     }
 }
 
@@ -167,7 +199,8 @@ img {
 
         @include shadow($blurRadius: 12px, $spreadRadius: 1px, $color: #d9d9d9);
 
-        .fas {
+        .fas,
+        .far {
             font-size: 96px;
             display: block;
             color: $of-blue;
@@ -210,8 +243,55 @@ img {
         }
     }
 
+
+    .benefit-icon-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benefit-icon {
+        font-size: 128px;
+
+        .fas, .far {
+            padding: 30px;
+            color: $of-blue;
+        }
+
+    }
+
+
 }
 
+
+
+.business,
+.it-teams {
+
+    .of-bg-dark .benefit-icon .fas,
+    .of-bg-dark .benefit-icon .far {
+        color: $white;
+    }
+
+    .benefit-icon-container {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benefit-icon {
+        font-size: 128px;
+
+        .fas, .far {
+            padding: 30px;
+            color: $of-blue;
+        }
+
+    }
+
+}
 
 
 .features {

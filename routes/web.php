@@ -15,6 +15,8 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 */
 
 Route::get('/', 'MainController@index')->name('home');
+Route::get('/for-business', 'MainController@business')->name('business');
+Route::get('/for-it-teams', 'MainController@itTeams')->name('it-teams');
 Route::get('/features', 'MainController@features')->name('features');
 Route::get('/pricing', 'MainController@pricing')->name('pricing');
 

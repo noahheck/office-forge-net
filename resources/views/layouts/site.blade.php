@@ -2,6 +2,8 @@
     $__currentRouteName    = Route::currentRouteName();
 
     $homeRouteActive = Route::is('home') ? 'active' : '';
+    $businessRouteActive = Route::is('business') ? 'active' : '';
+    $itTeamsRouteActive = Route::is('it-teams') ? 'active' : '';
     $featuresRouteActive = Route::is('features') ? 'active' : '';
     $pricingRouteActive = Route::is('pricing') ? 'active' : '';
     $blogRouteActive = Str::startsWith($__currentRouteName, 'blog') ? 'active' : '';
@@ -70,6 +72,33 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mr-auto">
                 <a class="nav-item nav-link {{ $homeRouteActive }}" href="{{ route('home') }}">Home</a>
+                <div class="nav-item dropdown {{ $businessRouteActive . $itTeamsRouteActive }}">
+                    <a class="nav-link dropdown-toggle" href="#" id="solutionsDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu solutions-dropdown" id="solutionsDropdown" aria-labelledby="solutionsDropdownToggle">
+                        <a class="dropdown-item {{ $businessRouteActive }} d-flex" href="{{ route('business') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-building"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>For Businesses</strong>
+                                <br>
+                                See how <strong>Office Forge</strong> can help your business excel
+                            </div>
+                        </a>
+                        <a class="dropdown-item {{ $itTeamsRouteActive }} d-flex" href="{{ route('it-teams') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-user-shield"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>For IT Teams</strong>
+                                <br>
+                                See why IT Teams love <strong>Office Forge</strong> as much users do
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 <a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
                 <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
                 <a class="nav-item nav-link {{ $blogRouteActive }}" href="{{ route('blog') }}">Blog</a>
@@ -98,6 +127,12 @@
                 <ul>
                     <li>
                         <a href="{{ route('home') }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('business') }}">For Businesses</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('it-teams') }}">For IT Teams</a>
                     </li>
                     <li>
                         <a href={{ route('features') }}>Features</a>

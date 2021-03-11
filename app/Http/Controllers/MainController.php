@@ -20,4 +20,14 @@ class MainController extends Controller
     {
         return view('pricing');
     }
+
+    public function business()
+    {
+        return view('business');
+    }
+
+    public function itTeams()
+    {
+        return view('it-teams');
+    }
 }

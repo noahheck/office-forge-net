@@ -11614,6 +11614,33 @@ body {
   border-bottom: 2px solid #3490dc;
 }
 
+.navbar .solutions-dropdown {
+  padding: 0;
+  border-radius: 0;
+}
+
+.navbar .solutions-dropdown .dropdown-item {
+  padding: 10px;
+}
+
+.navbar .solutions-dropdown .dropdown-item .icon-container {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #2e3339;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .solutions-dropdown .dropdown-item:not(:first-child) {
+  border-top: 1px solid #e3e3e3;
+}
+
+.navbar .solutions-dropdown .dropdown-item.active {
+  background-color: #f9f9f9;
+  color: black;
+  border-bottom: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -11688,7 +11715,8 @@ img {
   box-shadow: 2px 4px 12px 1px #d9d9d9;
 }
 
-.index .feature-card .fas {
+.index .feature-card .fas,
+.index .feature-card .far {
   font-size: 96px;
   display: block;
   color: #3490dc;
@@ -11725,6 +11753,49 @@ img {
 
 .index .feature-tab h4 {
   font-weight: bold;
+}
+
+.index .benefit-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index .benefit-icon {
+  font-size: 128px;
+}
+
+.index .benefit-icon .fas,
+.index .benefit-icon .far {
+  padding: 30px;
+  color: #3490dc;
+}
+
+.business .of-bg-dark .benefit-icon .fas,
+.business .of-bg-dark .benefit-icon .far,
+.it-teams .of-bg-dark .benefit-icon .fas,
+.it-teams .of-bg-dark .benefit-icon .far {
+  color: #fff;
+}
+
+.business .benefit-icon-container,
+.it-teams .benefit-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.business .benefit-icon,
+.it-teams .benefit-icon {
+  font-size: 128px;
+}
+
+.business .benefit-icon .fas,
+.business .benefit-icon .far,
+.it-teams .benefit-icon .fas,
+.it-teams .benefit-icon .far {
+  padding: 30px;
+  color: #3490dc;
 }
 
 .features img {

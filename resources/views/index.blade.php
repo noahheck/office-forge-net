@@ -30,6 +30,78 @@ index
 
     <div class="container">
 
+        <div class="row mb-5 mt-5">
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="feature-card">
+                    <span class="fas fa-briefcase"></span>
+                    <h5>Organize</h5>
+                    Keep all of your records, documents, and files organized
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="feature-card">
+                    <span class="far fa-comments"></span>
+                    <h5>Collaborate</h5>
+                    Ensure everyone is on the same page, from anywhere
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="feature-card">
+                    <span class="fas fa-tools"></span>
+                    <h5>Customize</h5>
+                    Workflows, Documents, and Storage tailored just for you
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5 shadow p-3">
+
+            <div class="col-12 col-md-7 order-2 order-md-1">
+                <h3 class="mb-4">Office Forge Is Great for Businesses!</h3>
+
+                <p>With Office Forge, you can finally get your business organized in a way that makes sense for you. Our tools let you model your software exactly how you run your business.</p>
+
+                <p>Keep all of your records, documents, and media files organized like never before. Organize your workflows into streamlined Processes, track important information with our FormDoc system, and gain realtime insight into how your business is operating!</p>
+
+                <p><a href="{{ route('business') }}">See how Office Forge can help your business excel!</a></p>
+            </div>
+
+            <div class="col-12 col-md-5 order-1 order-md-2 benefit-icon-container">
+
+                <div class="benefit-icon">
+                    <span class="fas fa-building"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row mb-5">
+
+            <div class="col-12 col-md-5 order-2 order-md-1 benefit-icon-container">
+
+                <div class="benefit-icon">
+                    <span class="fas fa-user-shield"></span>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-7 order-1 order-md-2">
+                <h3 class="mb-4">And Loved By IT Teams!</h3>
+
+                <p>Office Forge let's you deliver a customized business management platform, without the hassle. Office Forge is the no-code solution to the problems all businesses face.</p>
+
+                <p>Our worry-free hosting service lets you take care of your clients while we take care of the servers.</p>
+
+                <p><a href="{{ route('it-teams') }}">See why IT Teams love Office Forge!</a></p>
+            </div>
+
+        </div>
+
         <div class="row justify-content-center mb-5">
 
             <div class="col-12 col-md-10">
@@ -81,93 +153,6 @@ index
                         </div>
 
                     </div>
-
-                </div>
-
-            </div>
-
-        </div>
-        
-        <div class="row justify-content-center">
-
-            <div class="col-12 col-md-10">
-
-                <h3>All Your Business Activities</h3>
-
-                <p>We're hard at work crafting tools to help your organization with:</p>
-
-            </div>
-
-            <div class="col-12 col-md-8">
-
-                <div class="row">
-
-                    <div class="col-6">
-                        <div class="feature-card">
-                            <span class="fas fa-tasks"></span>
-                            Process and Task Management
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="feature-card">
-                            <span class="fas fa-comments"></span>
-                            Communication and Collaboration
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="feature-card">
-                            <span class="fas fa-folder-open"></span>
-                            File Storage
-                        </div>
-                    </div>
-
-                    <div class="col-6">
-                        <div class="feature-card">
-                            <span class="fas fa-calendar"></span>
-                            Scheduling
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="of-bg-dark mb-5">
-
-        <div class="container">
-
-            <div class="row justify-content-center">
-
-                <div class="col-12 col-md-10">
-
-                    <h2>Your Tools, Your Way</h2>
-
-                    <p>We want to give you the tools you need to do the very best work you can do. You'll be empowered to deliver the best products, service, and support possible to your customers. You'll be able to leverage Office Forge to implement the perfect solution to all of your operational concerns, including:</p>
-
-                    <ul>
-                        <li>
-                            Human Resources
-                            <ul>
-                                <li>Hiring</li>
-                                <li>Training</li>
-                                <li>Development</li>
-                            </ul>
-                        </li>
-                        <li>CRM</li>
-                        <li>Project Management</li>
-                        <li>Compliance</li>
-                    </ul>
-
-                    <h3>And so much more!</h3>
-
-
-                    <p>We're still polishing our software for our initial production release, but if you're interested in what we have to offer and want to learn more, feel free to reach out to us anytime and we'll be happy to connect with you! Drop us an email and we'll get right back to you: <a href="mailto:{{ config('site.supportEmail') }}">{{ config('site.supportEmail') }}</a></p>
 
                 </div>
 
