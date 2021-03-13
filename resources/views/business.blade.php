@@ -41,7 +41,7 @@ business
 
                 <p>With Office Forge, you can finally get your business organized in a way that makes sense for you. Our tools let you model your software exactly how you run your business.</p>
 
-                <p>Keep all of your records, documents, and media files organized like never before. Organize your workflows into streamlined Processes, track important information with our FormDoc system, and gain realtime insight into how your business is operating!</p>
+                <p>Keep all of your <a href="{{ route('features.filestore') }}">records, documents, and media files</a> organized like never before. Organize your <a href="{{ route('features.activities') }}">workflows into streamlined Processes</a>, track important information with our <a href="{{ route('features.form-docs') }}">FormDoc</a> system, and gain <a href="{{ route('features.reports') }}">realtime insight</a> into how your business is operating!</p>
             </div>
 
             <div class="col-12 col-md-5 order-1 order-md-2 benefit-icon-container">
@@ -69,7 +69,7 @@ business
 
                 <p>Office Forge keeps everybody on the same page. Your staff will all be working on the same project files, with the same same requirements and expectations. No longer will you find yourself searching through old emails trying to find the latest version of a file or figuring out project details.</p>
 
-                <p>Everything you need for all of your projects, big or small, in one place.</p>
+                <p><a href="{{ route('features.activities') }}">Everything you need for all of your projects, big or small, in one place.</a></p>
             </div>
 
         </div>
@@ -92,7 +92,7 @@ business
                 <div class="col-12 col-md-7 order-2 order-md-1">
                     <h3 class="mb-4">Customize!</h3>
 
-                    <p>Office Forge provides all the tools to have your own customized business management platform. All of the forms, documents, files, and storage options are tailored specifically for your business.</p>
+                    <p>Office Forge provides all the tools to have your own customized business management platform. All of the forms, documents, files, and storage options are <a href="{{ route('features.files') }}">tailored specifically for your business</a>.</p>
 
                     <p>Workflows, Documentation, and Access Controls are all designed to let you work the way you want to work while keeping things efficient, organized, and secure.</p>
                 </div>
@@ -117,9 +117,9 @@ business
             <div class="col-12 col-md-7">
                 <h3 class="mb-4">Insights and Intelligence</h3>
 
-                <p>Office Forge provides a powerful reporting system that lets you analyze all of the data entered using our form systems. While your staff are completing their day-to-day activities, Office Forge is building a powerful database of details and connections that can provide the insight you need to excel!</p>
+                <p>Office Forge provides a <a href="{{ route('features.reports') }}">powerful reporting system</a> that lets you analyze all of the data entered using our form systems. While your staff are <a href="{{ route('features.activities') }}">completing their day-to-day activities</a>, Office Forge is building a powerful database of details and connections that can provide the insight you need to excel!</p>
 
-                <p>Use our Reports system to analyze any of the information entered into Office Forge. Add charts and summaries to easily identify and track the things that move your business forward, and share these insights with your staff instantly to help everyone focus on the things that truly matter.</p>
+                <p>Use our <a href="{{ route('features.reports') }}">Reports</a> system to analyze any of the information entered into Office Forge. Add charts and summaries to easily identify and track the things that move your business forward, and share these insights with your staff instantly to help everyone focus on the things that truly matter.</p>
 
             </div>
 

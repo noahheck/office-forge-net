@@ -6,6 +6,11 @@
     $itTeamsRouteActive = Route::is('it-teams') ? 'active' : '';
     $featuresRouteActive = Route::is('features') ? 'active' : '';
     $pricingRouteActive = Route::is('pricing') ? 'active' : '';
+    $formDocRouteActive = Route::is('features.form-docs') ? 'active' : '';
+    $filesRouteActive = Route::is('features.files') ? 'active' : '';
+    $filestoreRouteActive = Route::is('features.filestore') ? 'active' : '';
+    $reportsRouteActive = Route::is('features.reports') ? 'active' : '';
+    $activitiesRouteActive = Route::is('features.activities') ? 'active' : '';
     $blogRouteActive = Str::startsWith($__currentRouteName, 'blog') ? 'active' : '';
     $adminRouteActive = Str::startsWith($__currentRouteName, 'admin') ? 'active' : '';
 @endphp
@@ -99,7 +104,69 @@
                         </a>
                     </div>
                 </div>
-                <a class="nav-item nav-link {{ $featuresRouteActive }}" href="{{ route('features') }}">Features</a>
+
+                <div class="nav-item dropdown {{ $formDocRouteActive . $filesRouteActive . $filestoreRouteActive . $reportsRouteActive . $activitiesRouteActive }}">
+                    <a class="nav-link dropdown-toggle" href="#" id="featuresDropdownToggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Features
+                    </a>
+                    <div class="dropdown-menu features-dropdown" id="featuresDropdown" aria-labelledby="featuresDropdownToggle">
+                        <a class="dropdown-item {{ $formDocRouteActive }} d-flex" href="{{ route('features.form-docs') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-file-invoice"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>FormDocs</strong>
+                                <br>
+                                Our easy to use, powerful data collection system
+                            </div>
+                        </a>
+
+                        <a class="dropdown-item {{ $filesRouteActive }} d-flex" href="{{ route('features.files') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-folder-open"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>Files</strong>
+                                <br>
+                                Custom resource management made easy
+                            </div>
+                        </a>
+
+                        <a class="dropdown-item {{ $filestoreRouteActive }} d-flex" href="{{ route('features.filestore') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-archive"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>FileStore</strong>
+                                <br>
+                                File hosting, sharing, and versioning
+                            </div>
+                        </a>
+
+                        <a class="dropdown-item {{ $reportsRouteActive }} d-flex" href="{{ route('features.reports')  }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-chart-line"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>Reports</strong>
+                                <br>
+                                Custom reports bringing insights and intelligence to your organization
+                            </div>
+                        </a>
+
+                        <a class="dropdown-item {{ $activitiesRouteActive }} d-flex" href="{{ route('features.activities') }}">
+                            <div class="icon-container flex-grow-0">
+                                <span class="fa-fw fas fa-clipboard-list"></span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <strong>Activities</strong>
+                                <br>
+                                Projects, Processes, and Task management for all your teams
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
                 <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
                 <a class="nav-item nav-link {{ $blogRouteActive }}" href="{{ route('blog') }}">Blog</a>
             </div>

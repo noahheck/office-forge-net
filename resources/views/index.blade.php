@@ -30,7 +30,7 @@ index
 
     <div class="container">
 
-        <div class="row mb-5 mt-5">
+        <div class="row mb-5 mt-5 justify-content-center">
 
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="feature-card">

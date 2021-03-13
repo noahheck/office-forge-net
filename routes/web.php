@@ -17,8 +17,15 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 Route::get('/', 'MainController@index')->name('home');
 Route::get('/for-business', 'MainController@business')->name('business');
 Route::get('/for-it-teams', 'MainController@itTeams')->name('it-teams');
-Route::get('/features', 'MainController@features')->name('features');
 Route::get('/pricing', 'MainController@pricing')->name('pricing');
+
+Route::get('/features', 'MainController@features')->name('features');
+Route::get('/features/form-docs', 'FeaturesController@formDocs')->name('features.form-docs');
+Route::get('/features/files', 'FeaturesController@files')->name('features.files');
+Route::get('/features/filestore', 'FeaturesController@filestore')->name('features.filestore');
+Route::get('/features/reports', 'FeaturesController@reports')->name('features.reports');
+Route::get('/features/activities', 'FeaturesController@activities')->name('features.activities');
+
 
 Route::post('/subscribe-to-updates', 'SubscriberController@subscribe')
     ->name('subscribe')

@@ -39,7 +39,7 @@ it-teams
             <div class="col-12 col-md-7 order-2 order-md-1">
                 <h3 class="mb-4">Low Costs</h3>
 
-                <p>We're pleased to offer our worry-free hosting for a consistent, stable price. This includes a dedicated VPS with 20GB of storage, state-of-the-art security, and managed updates. We don't charge more for additional users, or for feature updates and upgrades.</p>
+                <p>We're pleased to offer our <a href="{{ route('pricing') }}">worry-free hosting</a> for a consistent, stable price. This includes a dedicated VPS with 20GB of storage, state-of-the-art security, and managed updates. We don't charge more for additional users, or for feature updates and upgrades.</p>
 
                 <p>Need more resources or storage? We'll work with you to make sure your clients get the best experience possible with the resources they need to keep them running at their absolute best.</p>
             </div>
@@ -67,7 +67,7 @@ it-teams
             <div class="col-12 col-md-7">
                 <h3 class="mb-4">Customizability</h3>
 
-                <p>Office Forge is designed to be fully customized to each client's needs. All of our data collection, document, form, file storage, and workflow systems are designed to let each client express their unique business practices while keeping things efficient, organized, and secure.</p>
+                <p>Office Forge is designed to be <a href="{{ route('features.files') }}">fully customized to each client's needs</a>. All of our <a href="{{ route('features.form-docs') }}">data collection</a>, <a href="{{ route('features.form-docs') }}">document</a>, <a href="{{ route('features.form-docs') }}">form</a>, <a href="{{ route('features.filestore') }}">file storage</a>, and <a href="{{ route('features.activities') }}">workflow</a> systems are designed to let each client express their unique business practices while keeping things efficient, organized, and secure.</p>
             </div>
 
         </div>
@@ -91,7 +91,7 @@ it-teams
                 <div class="col-12 col-md-7 order-2 order-md-1">
                     <h3 class="mb-4">Simplified Management</h3>
 
-                    <p>Our worry-free hosting service lets you take care of your clients while we take care of the servers. Automatic and on-demand backups are provided, and our data center partners offer a 99.99% uptime SLA.</p>
+                    <p>Our <a href="{{ route('pricing') }}">worry-free hosting service</a> lets you take care of your clients while we take care of the servers. Automatic and on-demand backups are provided, and our data center partners offer a 99.99% uptime SLA.</p>
 
                     <p>Clients connect to their Office Forge server through their web browsers, so there's no client software to install or maintain. Servers get unique URLs so firewall management is straightforward and predictable.</p>
 

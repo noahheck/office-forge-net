@@ -67,9 +67,11 @@ body {
         }
     }
 
-    .solutions-dropdown {
+    .solutions-dropdown,
+    .features-dropdown {
         padding: 0;
         border-radius: 0;
+        margin-top: 8px;
 
         .dropdown-item {
 
@@ -303,6 +305,18 @@ img {
 }
 
 
+.features {
+    .jumbotron .icon-container {
+        text-align: center;
+        color: $of-blue;
+        font-size: 96px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 176px;
+        }
+    }
+}
+
 
 .pricing {
 
@@ -347,6 +361,7 @@ img {
     }
 
     .list-group {
+
     }
     .list-group-item {
         border-color: $dark-gray;
