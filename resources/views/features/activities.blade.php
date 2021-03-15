@@ -42,9 +42,9 @@ features files
                 <img alt="Office Forge screenshot showing an Activity called 'Website Redesign' for the Office Forge Cafe. The Activity shows an Activity Owner, 3 additional participants, details of the project to be completed, an attached document titled 'Original RFP' and tasks that are assigned to various participants along with due dates." src="{{ asset('images/features/activities_project.png') }}">
             </div>
 
-            <div class="col-12 col-md-7 pt-5">
+            <div class="col-12 col-md-7">
 
-                <h4>Powerful tools for doing great work</h4>
+                <h4 class="mt-5">Powerful tools for doing great work</h4>
 
                 <p class="mt-1 mt-md-5">Activities bring together everything your staff needs to get their best work done. Bring Team members together to collaborate, assign tasks, and track progress all in one place.</p>
 
@@ -66,7 +66,7 @@ features files
 
                 <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
 
-                    <h4>Streamline quality into your staff's day-to-day work with Office Forge Processes</h4>
+                    <h4 class="mt-5 mt-md-0">Streamline quality into your staff's day-to-day work with Office Forge Processes</h4>
 
                     <p class="mt-5">Organize your routine work practices with Processes to create recurring, organized workflows that help ensure quality and consistency. Processes contain default tasks, <a href="{{ route('features.form-docs') }}">FormDocs</a>, and instructions to help your staff deliver the best results to your customers.</p>
 
@@ -96,7 +96,7 @@ features files
 
             <div class="col-12 col-md-7">
 
-                <h4>Get Your Absolute Best Work Done</h4>
+                <h4 class="mt-5 mt-md-0">Get Your Absolute Best Work Done</h4>
 
                 <p class="mt-5">Each user's dashboard shows all their Tasks, Activities, Processes, and <a href="{{ route('features.form-docs') }}">FormDocs</a>. When new Tasks and Activities are assigned, they'll show up immediately, prioritized, and with all the resources your staff need to get the job done. Rest easy knowing that you don't have to worry about things falling through the cracks.</p>
 

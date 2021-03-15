@@ -42,9 +42,9 @@ features form-docs
                 <img alt="Screenshot of a FormDoc within Office Forge. The FormDoc is titled 'Property Details' and contains fields relevant to a property listing for a real estate agency." src="{{ asset('images/screenshot_2.png') }}">
             </div>
 
-            <div class="col-12 col-md-7 pt-5">
+            <div class="col-12 col-md-7 pt-0 pt-md-5">
 
-                <h4>Office Forge's innovative data collection system helps you collect the information that's important for your business!</h4>
+                <h4 class="mt-5 mt-md-0">Office Forge's innovative data collection system helps you collect the information that's important for your business!</h4>
 
                 <p class="mt-5">Using plain language, craft your information forms, use our drag-and-drop simplicity to organize them, and get access to powerful reporting features!</p>
 
@@ -68,7 +68,7 @@ features form-docs
 
                 <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
 
-                    <h4>Office Forge's FormDoc Review let's you find all of your documents without hassle!</h4>
+                    <h4 class="mt-5 mt-md-0">Office Forge's FormDoc Review let's you find all of your documents without hassle!</h4>
 
                     <p class="mt-5">Once set up, in-progress and submitted FormDocs can be easily found using the FormDoc Review. All documents are easy to find, and filters allow you to narrow down your search to only what you are interested in seeing.</p>
 
@@ -99,7 +99,7 @@ features form-docs
             <div class="col-12 col-md-7">
 
 
-                <h4>Office Forge's intuitive design makes sure your staff can always find their work!</h4>
+                <h4 class="mt-5 mt-md-0">Office Forge's intuitive design makes sure your staff can always find their work!</h4>
 
                 <p class="mt-5">Each user's dashboard includes links to all of their documents, tasks, and <a href="{{ route('features.activities') }}">projects</a>, so they're never more than a click away from completing their work.</p>
 

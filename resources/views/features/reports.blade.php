@@ -38,13 +38,13 @@ features reports
 
         <div class="row mt-4">
 
-            <div class="col-12 col-md-5 h-100">
+            <div class="col-12 col-md-5">
                 <img alt="Office Forge screenshot showing how to add a Filter to a Report. There is an option to select a field from the Performance Review FormDocs in the dataset. When the user has selected a Date type field, they are given the option choose how to compare the data field with the values selected when generating the report." src="{{ asset('images/features/reports_design.png') }}">
             </div>
 
             <div class="col-12 col-md-7 ">
 
-                <h4>Our easy-to-use Report builder puts you in charge of your data</h4>
+                <h4 class="mt-5 mt-md-0">Our easy-to-use Report builder puts you in charge of your data</h4>
 
                 <p class="mt-5">Reports are designed to help you make sense of the data your staff are collecting in Office Forge. Select which fields you want to appear in your report from any of our <a href="{{ route('features.form-docs') }}">form systems</a>, add filters to narrow down your datasets, and output the results in real time.</p>
 
@@ -66,11 +66,11 @@ features reports
 
                 <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
 
-                    <h4 class="mt-4 mt-md-0">Customized insights for the data that's important to you</h4>
+                    <h4 class="mt-5 mt-md-0">Customized insights for the data that's important to you</h4>
 
-                    <p class="mt-0 mt-lg-5">Once a Report has content, you can begin analyzing it. Once again, use our plain language tools to calculate averages, totals, trends, and more! Your results are output beautifully in charts, tables, summaries, and more!</p>
+                    <p class="mt-5">Once a Report has content, you can begin analyzing it. Once again, use our plain language tools to calculate averages, totals, trends, and more! Your results are output beautifully in charts, tables, summaries, and more!</p>
 
-                    <p class="mt-0 mt-lg-5">The Report builder guides you in deciding which kinds of analyses you might apply to the data in the Report. We provide over half a dozen types of charts, tables, calculations, and other visualizations to help provide meaningful insights and responsible practices to your reports.</p>
+                    <p class="mt-lg-5">The Report builder guides you in deciding which kinds of analyses you might apply to the data in the Report. We provide over half a dozen types of charts, tables, calculations, and other visualizations to help provide meaningful insights and responsible practices to your reports.</p>
 
                 </div>
 
@@ -116,8 +116,7 @@ features reports
 
             <div class="col-12 col-md-7">
 
-
-                <h4>Share with your Teams to focus on what matters most</h4>
+                <h4 class="mt-5 mt-md-0">Share with your Teams to focus on what matters most</h4>
 
                 <p class="mt-5">Reports always run against current data, so you never have to worry about out of date reporting.</p>
 

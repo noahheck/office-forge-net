@@ -42,9 +42,9 @@ features files
                 <img alt="Office Forge screenshot showing navigation options for Clients, Competitors, Contacts, Employees, Jobs, Properties, and Prospects. The main content of the screenshot includes an attractive listing of Properties and the addresses." src="{{ asset('images/screenshot_1_5.png') }}">
             </div>
 
-            <div class="col-12 col-md-7 pt-5">
+            <div class="col-12 col-md-7">
 
-                <h4>Uniquely customizable, Office Forge's Files system lets you design resources to perfectly represent your business.</h4>
+                <h4 class="mt-5 mt-md-0">Uniquely customizable, Office Forge's Files system lets you design resources to perfectly represent your business.</h4>
 
                 <p class="mt-5">Express your needs in the language of your business. Use the terminology that makes sense for you and allows you to embrace your unique advantages to your staff!</p>
 
@@ -66,7 +66,7 @@ features files
 
                 <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
 
-                    <h4>Office Forge's Tools Help You Get Organized!</h4>
+                    <h4 class="mt-5 mt-md-0">Office Forge's Tools Help You Get Organized!</h4>
 
                     <p class="mt-5">Files expose powerful tools to help keep your business organized. Create custom <a href="{{ route('features.form-docs') }}">Forms</a> to collect important information, <a href="{{ route('features.activities') }}">Processes</a> to map workflows, and <a href="{{ route('features.filestore') }}">FileStore</a> to keep track of important documents and media.</p>
 
@@ -96,8 +96,7 @@ features files
 
             <div class="col-12 col-md-7">
 
-
-                <h4>Powerful Controls, Simplified</h4>
+                <h4 class="mt-5 mt-md-0">Powerful Controls, Simplified</h4>
 
                 <p class="mt-5">Office Forge provides a multi-level Access Control scheme. This easy-to-configure system provides a powerful framework for you to ensure only users who should be accessing certain information are able to do so.</p>
 

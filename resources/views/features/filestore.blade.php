@@ -42,9 +42,9 @@ features filestore
                 <img alt="Office Forge screenshot showing 3 FileStore Drives in which to store and organize an organization's digital media." src="{{ asset('images/features/filestore_drives.png') }}">
             </div>
 
-            <div class="col-12 col-md-7 pt-3">
+            <div class="col-12 col-md-7">
 
-                <h4>Secure Storage For Your Digital Assets</h4>
+                <h4 class="mt-5 mt-md-0">Secure Storage For Your Digital Assets</h4>
 
                 <p class="mt-5">FileStore lets you define Drives to organize your documents and media files. Drives can further be organized using a familiar Folder paradigm to help your organization stay efficient.</p>
 
@@ -66,7 +66,7 @@ features filestore
 
                 <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
 
-                    <h4>Your Files Are Secure, And Everywhere You Need Them!</h4>
+                    <h4 class="mt-5 mt-md-0">Your Files Are Secure, And Everywhere You Need Them!</h4>
 
                     <p class="mt-4">Office Forge runs in your browser, so you can access your content from a web browser anywhere in the world!</p>
 
@@ -96,8 +96,7 @@ features filestore
 
             <div class="col-12 col-md-7">
 
-
-                <h4>Here To Help As Your Organization Grows</h4>
+                <h4 class="mt-5 mt-md-0">Here To Help As Your Organization Grows</h4>
 
                 <p class="mt-5">FileStore makes it easy to upload new versions of your files as they change. Links and access controls automatically reference the most recent version of the file, </p>
 
