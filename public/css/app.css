@@ -11623,7 +11623,29 @@ body {
 
 .navbar .solutions-dropdown .dropdown-item,
 .navbar .features-dropdown .dropdown-item {
+  white-space: normal;
   padding: 10px;
+}
+
+@media (min-width: 576px) {
+  .navbar .solutions-dropdown .dropdown-item,
+  .navbar .features-dropdown .dropdown-item {
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .solutions-dropdown .dropdown-item,
+  .navbar .features-dropdown .dropdown-item {
+    min-width: 400px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .solutions-dropdown .dropdown-item,
+  .navbar .features-dropdown .dropdown-item {
+    min-width: 500px;
+  }
 }
 
 .navbar .solutions-dropdown .dropdown-item .icon-container,

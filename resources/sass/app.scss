@@ -75,6 +75,18 @@ body {
 
         .dropdown-item {
 
+            white-space: normal;
+
+            @include media-breakpoint-up(sm) {
+                min-width: 200px;
+            }
+            @include media-breakpoint-up(md) {
+                min-width: 400px;
+            }
+            @include media-breakpoint-up(lg) {
+                min-width: 500px;
+            }
+
             padding: 10px;
 
             .icon-container {
