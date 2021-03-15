@@ -65,7 +65,7 @@ index
 
                 <p>With Office Forge, you can finally get your business organized in a way that makes sense for you. Our tools let you model your software exactly how you run your business.</p>
 
-                <p>Keep all of your records, documents, and media files organized like never before. Organize your workflows into streamlined Processes, track important information with our FormDoc system, and gain realtime insight into how your business is operating!</p>
+                <p>Keep all of your <a href="{{ route('features.filestore') }}">records, documents, and media files</a> organized like never before. Organize your workflows into streamlined <a href="{{ route('features.activities') }}">Processes</a>, track important information with our <a href="{{ route('features.form-docs') }}">FormDoc</a> system, and gain <a href="{{ route('features.reports') }}">realtime insight</a> into how your business is operating!</p>
 
                 <p><a href="{{ route('business') }}">See how Office Forge can help your business excel!</a></p>
             </div>

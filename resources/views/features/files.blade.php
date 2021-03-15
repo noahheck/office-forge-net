@@ -48,6 +48,8 @@ features files
 
                 <p class="mt-5">Express your needs in the language of your business. Use the terminology that makes sense for you and allows you to embrace your unique advantages to your staff!</p>
 
+                <p>Employees, Clients, Jobs, Referral Sources, Contacts, Suppliers, Distributors, Prospects, Customers, Contractors, Educators. Everything that's important to your business has a dedicated home in Office Forge.</p>
+
             </div>
 
         </div>

@@ -17,9 +17,9 @@ features form-docs
 
                     <h2>Easy to Use, Powerful Data Collection</h2>
 
-                    <h4>Organize your business information in the way that makes sense for your organization!</h4>
+                    <h4>Organize your business information in the way that makes sense for you!</h4>
 
-                    <p class="mt-5">Our FormDocs system makes collecting the information you need easy. No more forgotten data, lost or misplaced forms, forgotten data, or incomplete reports. FormDocs make it easy to get it right the first time, every time.</p>
+                    <p class="mt-5">Our FormDocs system makes collecting the information you need easy. No more forgotten data, lost or misplaced forms, or incomplete reports. FormDocs make it easy to get it right the first time, every time.</p>
 
                 </div>
 

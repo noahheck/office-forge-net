@@ -121,7 +121,7 @@ it-teams
 
                 <p>Our hosting infrastructure implements the best available technologies to ensure a high performance, secure computing environment. We implement state-of-the-art firewalls and encryption protocols running on modern hardware and operating systems.</p>
 
-                <p>In addition, all of our application software, build tools, and provisioning tools are open source and available for anybody to audit. We don't have any access to your client's application data unless they provide it.</p>
+                <p>In addition, our application software, build system, and provisioning tools are open source and available for anybody to audit. We don't have any access to your client's application data unless they provide it.</p>
 
                 <p>This all combines to allow us to proudly and confidently say that your privacy is guaranteed!</p>
             </div>
