@@ -190,7 +190,8 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-6 col-md-3 col-lg-2">
+                Office Forge
                 <ul>
                     <li>
                         <a href="{{ route('home') }}">Home</a>
@@ -213,7 +214,38 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-6 text-md-right">
+            <div class="col-6 col-md-3 col-lg-2">
+                Features
+                <ul>
+                    <li>
+                        <a href="{{ route('features.form-docs') }}">
+                            FormDocs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('features.files') }}">
+                            Files
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('features.filestore') }}">
+                            FileStore
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('features.reports') }}">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('features.activities') }}">
+                            Activities
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-8 text-md-right">
                 <p>&copy; {{ date('Y') }} - Pillar Falls Software, LLC.</p>
                 <p>Contact: <a href="mailto:{{ config('site.supportEmail') }}">{{ config('site.supportEmail') }}</a></p>
                 <p>Office Forge is proud to be an open-source project - Find out more at:</p>
