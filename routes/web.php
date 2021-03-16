@@ -64,8 +64,16 @@ Route::middleware(['auth'])->group(function() {
 
         Route::resource('/articles', 'ArticleController');
 
+        Route::resource('/contacts', 'ContactController');
+        Route::post('/contacts/{contact}/unread', 'ContactController@unread')->name('contacts.unread');
+        Route::post('/contacts/{contact}/complete', 'ContactController@complete')->name('contacts.complete');
+        Route::post('/contacts/{contact}/uncomplete', 'ContactController@uncomplete')->name('contacts.uncomplete');
+
+        Route::post('/contacts/{contact}/notes', 'Contact\NoteController@store')->name('contacts.notes.store');
+
         Route::resource('/mailings', 'MailingController');
         Route::post('/mailings/{mailing}/send', 'MailingController@send')->name('mailings.send');
+
     });
 
 });

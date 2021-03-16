@@ -11,7 +11,7 @@ index
         <div class="col-12 col-md-6">
             <div class="card shadow-sm admin-overview-card">
                 <div class="card-header">
-                    <h4>Subscribers ({{ $subscriberCount }})</h4>
+                    <h4>Subscribers - {{ $subscriberCount }}</h4>
                 </div>
                 <a class="card-body" href="{{ route('admin.subscribers.index') }}">
                     <span class="fas fa-envelope icon"></span>
@@ -22,7 +22,18 @@ index
         <div class="col-12 col-md-6">
             <div class="card shadow-sm admin-overview-card">
                 <div class="card-header">
-                    <h4>Articles ({{ $articleCount }})</h4>
+                    <h4>Contacts - {{ $contactsCount }} ({{ $newContactsCount }} New)</h4>
+                </div>
+                <a class="card-body" href="{{ route('admin.contacts.index') }}">
+                    <span class="fas fa-user icon"></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <div class="card shadow-sm admin-overview-card">
+                <div class="card-header">
+                    <h4>Articles - {{ $articleCount }}</h4>
                 </div>
                 <a class="card-body" href="{{ route('admin.articles.index') }}">
                     <span class="fas fa-file-alt icon"></span>
@@ -33,7 +44,7 @@ index
         <div class="col-12 col-md-6">
             <div class="card shadow-sm admin-overview-card">
                 <div class="card-header">
-                    <h4>Mailings ({{ $mailingCount }})</h4>
+                    <h4>Mailings - {{ $mailingCount }}</h4>
                 </div>
                 <a class="card-body" href="{{ route('admin.mailings.index') }}">
                     <span class="fas fa-paper-plane icon"></span>

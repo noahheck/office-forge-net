@@ -631,3 +631,12 @@ label {
   margin-bottom: 0;
 }
 
+.note {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.note:not(:first-child) {
+  border-top: 1px dashed #e3e3e3;
+}
+
