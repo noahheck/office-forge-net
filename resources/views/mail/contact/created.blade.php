@@ -3,18 +3,18 @@
 <hr>
 
 <dl>
-    <dt>Name:</dt>
+    <dt><strong>Name</strong></dt>
     <dd>{{ $contact->name }}</dd>
 
-    <dt>Organization:</dt>
+    <dt><strong>Organization</strong></dt>
     <dd>{{ $contact->organization }}</dd>
 
-    <dt>Email:</dt>
+    <dt><strong>Email</strong></dt>
     <dd>{{ $contact->email }}</dd>
 
-    <dt>Phone:</dt>
+    <dt><strong>Phone</strong></dt>
     <dd>{{ $contact->phone }}</dd>
 
-    <dt>Message:</dt>
+    <dt><strong>Message</strong></dt>
     <dd>{!! nl2br(e($contact->message)) !!}</dd>
 </dl>
