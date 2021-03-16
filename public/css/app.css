@@ -11602,6 +11602,10 @@ body {
   background-color: #fcfcfc;
 }
 
+.bold-labels label {
+  font-weight: bold;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -11841,6 +11845,18 @@ img {
   .features .jumbotron .icon-container {
     font-size: 176px;
   }
+}
+
+.contact .jumbotron {
+  text-align: left;
+}
+
+.contact .jumbotron .card {
+  color: #242424;
+}
+
+.contact .of-logo {
+  max-width: 100%;
 }
 
 .pricing .pricing-icon-container {

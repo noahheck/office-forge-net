@@ -78,6 +78,8 @@ class AppServiceProvider extends ServiceProvider
 
         \Blade::include('form/text',           'textField');
         \Blade::include('form/date',           'dateField');
+        \Blade::include('form/email',          'emailField');
+        \Blade::include('form/phone',          'phoneField');
         \Blade::include('form/textarea',       'textareaField');
         \Blade::include('form/checkboxSwitch', 'checkboxSwitchField');
         \Blade::include('form/text-editor',    'textEditorField');

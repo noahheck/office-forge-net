@@ -158,7 +158,11 @@ pricing
 
                     <h4>We want to make sure your company's experience with Office Forge is nothing short of fantastic. Let us know how we can help!</h4>
 
-                    <h4>Need help with anything not on the list? <a href="mailto:{{ config('site.supportEmail') }}">Contact us</a> and let us know what we can do to help!</h4>
+                    <h4>Need help with anything not on the list? <a href="{{ route('contact') }}">Contact us</a> and let us know what we can do to help!</h4>
+
+                    <p class="mt-4">
+                        <a class="btn btn-primary" href="{{ route('contact') }}">Contact us now!</a>
+                    </p>
 
 
                 </div>

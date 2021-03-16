@@ -52,6 +52,11 @@ body {
 }
 
 
+.bold-labels label {
+    font-weight: bold;
+}
+
+
 .navbar {
 
     background-color: $white;
@@ -327,6 +332,21 @@ img {
         @include media-breakpoint-up(md) {
             font-size: 176px;
         }
+    }
+}
+
+
+.contact {
+    .jumbotron {
+        text-align: left;
+
+        .card {
+            color: #242424;
+        }
+    }
+
+    .of-logo {
+        max-width: 100%;
     }
 }
 

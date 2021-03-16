@@ -26,6 +26,11 @@ class MainController extends Controller
         return view('pricing');
     }
 
+    public function contact()
+    {
+        return view('contact');
+    }
+
     public function business()
     {
         return view('business');

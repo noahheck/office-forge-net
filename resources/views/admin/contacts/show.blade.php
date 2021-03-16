@@ -80,12 +80,12 @@ admin-mailings-show
                 </div>
             </div>
 
-            <h4>Notes:</h4>
-            <hr>
 
             @foreach ($contact->notes as $note)
 
                 @if ($loop->first)
+                    <h4>Notes:</h4>
+                    <hr>
                     <div class="notes">
                 @endif
 

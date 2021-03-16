@@ -19,6 +19,11 @@ Route::get('/for-business', 'MainController@business')->name('business');
 Route::get('/for-it-teams', 'MainController@itTeams')->name('it-teams');
 Route::get('/pricing', 'MainController@pricing')->name('pricing');
 
+Route::get('/contact', 'MainController@contact')->name('contact');
+Route::post('/contact', 'ContactController@contact')->name('submit-contact')
+    ->middleware(ProtectAgainstSpam::class);
+Route::get('/submitted-contact', 'ContactController@submitted')->name('submitted-contact');
+
 Route::get('/features', 'MainController@features')->name('features');
 Route::get('/features/form-docs', 'FeaturesController@formDocs')->name('features.form-docs');
 Route::get('/features/files', 'FeaturesController@files')->name('features.files');

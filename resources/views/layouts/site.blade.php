@@ -12,6 +12,7 @@
     $reportsRouteActive = Route::is('features.reports') ? 'active' : '';
     $activitiesRouteActive = Route::is('features.activities') ? 'active' : '';
     $blogRouteActive = Str::startsWith($__currentRouteName, 'blog') ? 'active' : '';
+    $contactRouteActive = Str::startsWith($__currentRouteName, 'contact') ? 'active' : '';
     $adminRouteActive = Str::startsWith($__currentRouteName, 'admin') ? 'active' : '';
 @endphp
 <!DOCTYPE html>
@@ -169,6 +170,7 @@
                 </div>
                 <a class="nav-item nav-link {{ $pricingRouteActive }}" href="{{ route('pricing') }}">Pricing</a>
                 <a class="nav-item nav-link {{ $blogRouteActive }}" href="{{ route('blog') }}">Blog</a>
+                <a class="nav-item nav-link {{ $contactRouteActive }}" href="{{ route('contact') }}">Contact</a>
             </div>
             @auth
                 <div class="navbar-nav">
@@ -203,13 +205,13 @@
                         <a href="{{ route('it-teams') }}">For IT Teams</a>
                     </li>
                     <li>
-                        <a href={{ route('features') }}>Features</a>
-                    </li>
-                    <li>
                         <a href={{ route('pricing') }}>Pricing</a>
                     </li>
                     <li>
                         <a href={{ route('blog') }}>Blog</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>
