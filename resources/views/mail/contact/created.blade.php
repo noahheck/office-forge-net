@@ -7,7 +7,7 @@
     <dd>{{ $contact->name }}</dd>
 
     <dt><strong>Organization</strong></dt>
-    <dd>{{ $contact->organization }}</dd>
+    <dd>{{ $contact->business }}</dd>
 
     <dt><strong>Email</strong></dt>
     <dd>{{ $contact->email }}</dd>
