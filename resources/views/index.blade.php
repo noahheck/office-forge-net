@@ -93,7 +93,7 @@ index
             <div class="col-12 col-md-7 order-1 order-md-2">
                 <h3 class="mb-4">And Loved By IT Teams!</h3>
 
-                <p>Office Forge let's you deliver a customized business management platform, without the hassle. Office Forge is the no-code solution to the problems all businesses face.</p>
+                <p>Office Forge lets you deliver a customized business management platform, without the hassle. Office Forge is the no-code solution to the problems all businesses face.</p>
 
                 <p>Our worry-free hosting service lets you take care of your clients while we take care of the servers.</p>
 
