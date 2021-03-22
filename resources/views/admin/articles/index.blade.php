@@ -21,40 +21,45 @@ index
 
                     <hr>
 
-                    <table class="table table-bordered table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th style="width: 100px;">Date</th>
-                                <th style="width: 100px;">Published</th>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Views</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($articles as $article)
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-hover">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <td>{{ \App\format_date($article->date) }}</td>
-                                    <td class="text-center">
-                                        @if ($article->published)
-                                            <span class="far fa-check-square"></span>
-                                        @else
-                                            <span class="far fa-square"></span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <a href="{{ route('admin.articles.show', [$article]) }}">{{ $article->title }}</a>
-                                    </td>
-                                    <td>
-                                        {{ $article->author->name }}
-                                    </td>
-                                    <td>
-                                        {{ $article->views }}
-                                    </td>
+                                    <th style="width: 100px;">Date</th>
+                                    <th style="width: 100px;">Published</th>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Views</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($articles as $article)
+                                    <tr>
+                                        <td>{{ \App\format_date($article->date) }}</td>
+                                        <td class="text-center">
+                                            @if ($article->published)
+                                                <span class="far fa-check-square"></span>
+                                            @else
+                                                <span class="far fa-square"></span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('admin.articles.show', [$article]) }}">{{ $article->title }}</a>
+                                        </td>
+                                        <td>
+                                            {{ $article->author->name }}
+                                        </td>
+                                        <td>
+                                            {{ $article->views }}
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
