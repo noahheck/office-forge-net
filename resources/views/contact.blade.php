@@ -24,7 +24,13 @@ contact
 
                     <p class="lead">If you have any questions about Office Forge, our worry-free hosting, or anything else, let us know!</p>
 
-                    <p>Fill out the form below and we'll get back with you as soon as possible.</p>
+                    <p>
+                        Feel free to email us anytime: <a href="mailto:{{ config('site.supportEmail') }}">{{ config('site.supportEmail') }}</a>
+                    </p>
+
+{{--                    <hr style="border-color: #d9d9d9;">--}}
+
+                    <p>or fill out the form below and we'll get back with you as soon as possible.</p>
 
                     <div class="card shadow">
                         <div class="card-body">
